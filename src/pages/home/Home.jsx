@@ -2,6 +2,7 @@ import React from "react";
 import CatagorySection from "./CatagorySection";
 import OffersSection from "./OffersSection";
 import Client from "./ClientsSections";
+import AboutSection from "./AboutSection";
 
 
 const Home = () => {
@@ -9,6 +10,7 @@ const Home = () => {
     <CatagorySection/>
     <OffersSection/>
     <Client/>
+    <AboutSection/>
   </div>;
 };
 
