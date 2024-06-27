@@ -6,7 +6,6 @@ import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import { GoPlusCircle } from "react-icons/go";
 
-
 const Accordion = styled((props) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
 ))(({ theme }) => ({
@@ -24,7 +23,7 @@ const Accordion = styled((props) => (
 
 const AccordionSummary = styled((props) => (
   <MuiAccordionSummary
-    expandIcon={<GoPlusCircle className="text-white text-[24px]"  />}
+    expandIcon={<GoPlusCircle className="text-[24px] text-white" />}
     {...props}
   />
 ))(({ theme }) => ({
@@ -32,6 +31,8 @@ const AccordionSummary = styled((props) => (
   flexDirection: "row",
   "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded": {
     transform: "rotate(45deg)",
+    background: "white",
+    borderRadius: "50%",
   },
   "& .MuiAccordionSummary-content": {
     marginLeft: theme.spacing(1),
@@ -40,11 +41,11 @@ const AccordionSummary = styled((props) => (
 
 const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
   padding: theme.spacing(2),
-  color:"white",
-  fontSize:"16px",
-  fontStyle:"normal",
-  paddingTop:"24px",
-  paddingBottom:"24px",
+  color: "white",
+  fontSize: "16px",
+  fontStyle: "normal",
+  paddingTop: "24px",
+  paddingBottom: "24px",
   background: "#088269",
   borderTop: "1px solid white",
 }));
@@ -63,7 +64,9 @@ export default function CustomizedAccordions() {
         onChange={handleChange("panel1")}
       >
         <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
-          <Typography className="text-primaryWhite " sx={{ fontSize: '24px' }}>О компании</Typography>
+          <Typography className="text-primaryWhite" sx={{ fontSize: "24px" }}>
+            О компании
+          </Typography>
         </AccordionSummary>
 
         <AccordionDetails>
@@ -80,7 +83,9 @@ export default function CustomizedAccordions() {
         onChange={handleChange("panel2")}
       >
         <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
-          <Typography className="text-primaryWhite " sx={{ fontSize: '24px' }}>Преимущества сотрудников</Typography>
+          <Typography className="text-primaryWhite" sx={{ fontSize: "24px" }}>
+            Преимущества сотрудников
+          </Typography>
         </AccordionSummary>
 
         <AccordionDetails>
@@ -97,7 +102,9 @@ export default function CustomizedAccordions() {
         onChange={handleChange("panel3")}
       >
         <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
-          <Typography className="text-primaryWhite " sx={{ fontSize: '24px' }}>Достижения компании</Typography>
+          <Typography className="text-primaryWhite" sx={{ fontSize: "24px" }}>
+            Достижения компании
+          </Typography>
         </AccordionSummary>
 
         <AccordionDetails>
@@ -114,9 +121,10 @@ export default function CustomizedAccordions() {
         onChange={handleChange("panel4")}
       >
         <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
-          <Typography className="text-primaryWhite " sx={{ fontSize: '24px' }}>Карьерный рост</Typography>
+          <Typography className="text-primaryWhite" sx={{ fontSize: "24px" }}>
+            Карьерный рост
+          </Typography>
         </AccordionSummary>
-
         <AccordionDetails>
           <Typography>
             Но синтетическое тестирование, в своём классическом представлении,
@@ -126,7 +134,6 @@ export default function CustomizedAccordions() {
           </Typography>
         </AccordionDetails>
       </Accordion>
-      
     </div>
   );
 }

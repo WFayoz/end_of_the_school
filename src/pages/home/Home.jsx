@@ -5,16 +5,23 @@ import Client from "./ClientsSections";
 import AboutSection from "./AboutSection";
 import NewsSection from "./NewsSection";
 import BrandsSection from "./BrandsSection";
+import EquipmentSections from "./EquipmentSections";
+import FormSection from "./FormSection";
+import SubscribeSection from "./SubscribeSection";
 
 const Home = () => {
   return (
     <div>
       <CatagorySection />
+      <EquipmentSections/>
       <OffersSection />
       <Client />
       <BrandsSection />
       <AboutSection />
       <NewsSection />
+      <FormSection/>
+      <SubscribeSection/>
+      
     </div>
   );
 };
