@@ -4,7 +4,7 @@ import location from "../../../public/icons/location.svg";
 
 const HeaderBottom = () => {
   return (
-    <div className="flex items-center justify-between">
+    <div className="flex items-center justify-between  pb-4">
       <div className="flex list-none gap-5 text-primaryBlack">
         <div className="flex list-none">
           <img src={burger} alt="Burger" />

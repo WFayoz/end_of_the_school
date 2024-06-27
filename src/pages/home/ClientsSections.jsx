@@ -56,8 +56,10 @@ const clients = [
 
 const Client = () => (
   <div className="mt-36 bg-accent py-24">
-    <div className="mx-auto flex max-w-[1350px] items-center justify-between px-5">
-      <p className="w-1/2 text-[30px] text-primaryBlack">Наши клиенты</p>
+    <div className="mx-auto flex max-w-[1350px] items-start justify-between px-5">
+      <p className="w-1/2 text-start text-[30px] text-primaryBlack">
+        Наши клиенты
+      </p>
       <div className="w-1/2 items-start text-[48px] text-primaryBlack">
         БОЛЕЕ <span className="text-primaryGreen">5000</span> <br />
         УСПЕШНЫХ ПРОЕКТОВ

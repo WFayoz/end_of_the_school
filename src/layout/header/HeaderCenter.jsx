@@ -16,7 +16,7 @@ const HeaderCenter = () => {
         <div className="flex w-[460px] items-center rounded-[50px] border border-secondaryGray bg-accent">
           <input
             id="id"
-            type="search"
+            type="text"
             className="h-full w-[90%] rounded-[50px] py-[10px] pl-[15px] outline-none"
             placeholder="Поиск"
           />

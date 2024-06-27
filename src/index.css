@@ -1,3 +1,28 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.custom-arrow {
+  margin-top: 40px;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+}
+
+.next-arrow {
+  margin-left: 70px;
+}
+
+.prev-arrow {
+  position: absolute;
+  bottom: 0;
+}
+
+*{
+    transition: 300ms;
+}
