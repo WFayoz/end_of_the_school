@@ -12,10 +12,14 @@ import SubscribeSection from "./SubscribeSection";
 const Home = () => {
   return (
     <div>
-      <CatagorySection />
-      <EquipmentSections/>
-      <OffersSection />
-      <Client />
+      {/* <CatagorySection /> */}
+    
+      {/* <EquipmentSections/> */}
+      <div className="mb-80">
+
+</div>
+      {/* <OffersSection />
+      <Client /> */}
       <BrandsSection />
       <AboutSection />
       <NewsSection />

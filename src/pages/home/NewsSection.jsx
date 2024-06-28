@@ -173,7 +173,7 @@ const NewsSection = () => {
             </div>
           </div>
         </Slider>
-        <button className="-mt-8 ml-[580px]">hellp</button>
+        <button className="-mt-8 ml-[580px] buttonG">Все новости</button>
       </div>
     </div>
   );

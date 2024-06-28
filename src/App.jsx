@@ -6,9 +6,9 @@ function App() {
   return (
     <>
     <div className="bg-primaryCream">
-    <Header />
+    {/* <Header /> */}
     <Home/>
-    <Footer/>
+    {/* <Footer/> */}
     </div>
      
     </>

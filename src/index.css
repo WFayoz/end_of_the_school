@@ -26,3 +26,22 @@
 *{
     transition: 300ms;
 }
+
+
+
+.buttonG{
+  padding: 11px 30px;
+  border-radius: 50px;
+  background-color: #088269;
+  border: 1px solid #088269;
+  color: white;
+  font-size: 16px;
+}
+.buttonW{
+  padding: 11px 30px;
+  border-radius: 50px;
+  background-color: transparent;
+  border: 1px solid #088269;
+  color: #088269;
+  font-size: 16px;
+}

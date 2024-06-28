@@ -8,22 +8,22 @@ const OffersSection = () => {
   return (
     <div className="mx-auto mt-36 flex w-full max-w-[1350px] flex-col items-start justify-center px-5">
       <div>
-        <p className="text-[32px] text-primaryBlack">Почему выбирают нас?</p>
+        <p className="text-[32px] max-md:text-[28px] text-primaryBlack">Почему выбирают нас?</p>
       </div>
-      <div className="mt-10 flex w-full items-center justify-between">
-        <div className="flex h-[320px] w-[320px] flex-col items-center justify-center rounded-lg border border-accent">
+      <div className="mt-10 flex w-full items-center justify-between max-md:grid grid-cols-2 gap-10">
+        <div className="flex h-[320px] w-[320px] max-xl:w-[250px] max-xl:h-[250px] max-lg:w-[200px] max-lg:h-[200px] max-md:w-[160px] max-md:h-[160px]   flex-col items-center justify-center rounded-lg border border-accent">
           <img src={symbol1} alt="symbol" />
           <p className="pt-3npm i text-primaryBlack">Быстрая доставка</p>
         </div>
-        <div className="flex h-[320px] w-[320px] flex-col items-center justify-center rounded-lg border border-accent">
+        <div className="flex h-[320px] w-[320px] max-xl:w-[250px] max-xl:h-[250px] max-lg:w-[200px] max-lg:h-[200px] max-md:w-[160px] max-md:h-[160px]   flex-col items-center justify-center rounded-lg border border-accent">
           <img src={symbol2} alt="symbol" />
           <p className="pt-3npm text-primaryBlack">Быстрая доставка</p>
         </div>
-        <div className="flex h-[320px] w-[320px] flex-col items-center justify-center rounded-lg border border-accent">
+        <div className="flex h-[320px] w-[320px] max-xl:w-[250px] max-xl:h-[250px] max-lg:w-[200px] max-lg:h-[200px] max-md:w-[160px] max-md:h-[160px]   flex-col items-center justify-center rounded-lg border border-accent">
           <img src={symbol3} alt="symbol" />
           <p className="pt-3npm i text-primaryBlack">Быстрая доставка</p>
         </div>
-        <div className="flex h-[320px] w-[320px] flex-col items-center justify-center rounded-lg border border-accent">
+        <div className="flex h-[320px] w-[320px] max-xl:w-[250px] max-xl:h-[250px] max-lg:w-[200px] max-lg:h-[200px] max-md:w-[160px] max-md:h-[160px]   flex-col items-center justify-center rounded-lg border border-accent">
           <img src={symbol4} alt="symbol" />
           <p className="pt-3 text-primaryBlack">Быстрая доставка</p>
         </div>

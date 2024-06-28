@@ -2,14 +2,12 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { GrLinkPrevious } from "react-icons/gr";
-
-import { GrLinkNext } from "react-icons/gr";
+import { GrLinkPrevious, GrLinkNext } from "react-icons/gr";
 
 const NextArrow = ({ onClick }) => {
   return (
     <div
-      className="custom-arrow next-arrow border border-accent"
+      className="custom-arrow next-arrow border border-accent max-md:hidden" 
       onClick={onClick}
     >
       <GrLinkNext />
@@ -20,7 +18,7 @@ const NextArrow = ({ onClick }) => {
 const PrevArrow = ({ onClick }) => {
   return (
     <div
-      className="custom-arrow prev-arrow border border-accent"
+      className="custom-arrow prev-arrow border border-accent max-md:hidden"
       onClick={onClick}
     >
       <GrLinkPrevious />
@@ -29,7 +27,7 @@ const PrevArrow = ({ onClick }) => {
 };
 
 const BrandsSection = () => {
-  var settings = {
+  const settings = {
     dots: false,
     infinite: true,
     speed: 500,
@@ -37,113 +35,92 @@ const BrandsSection = () => {
     slidesToScroll: 1,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
+    responsive:[
+      {
+        breakpoint: 1300,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 670,
+        settings: {
+          slidesToShow: 1.7,
+          slidesToScroll: 1,
+          initialSlide: 1,
+        },
+      },
+      {
+        breakpoint: 588,
+        settings: {
+          slidesToShow: 1.4,
+          slidesToScroll: 1,
+          initialSlide: 1,
+        },
+      },
+      {
+        breakpoint: 470,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 1,
+        },
+      },
+      {
+        breakpoint: 888,
+        settings: {
+          slidesToShow: 2.5,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
+      },
+    ]
   };
 
   return (
-    <div className="relative mx-auto mt-32 flex max-w-[1350px] gap-[135px] overflow-hidden pl-5">
+    <div className="relative mx-auto mt-32 flex max-w-[1350px] gap-[135px] overflow-hidden px-5 max-lg:flex-col">
+      <div className="flex w-full items-center justify-between max-md:mt-5">
       <p className="text-[32px] text-primaryBlack">Бренды</p>
+      <button className="buttonG md:hidden">Сертификаты</button>
+      </div>
       <div className="mb-32 flex w-full flex-col items-center justify-center">
         <Slider {...settings} className="w-full">
-          <div className="flex items-center justify-center">
-            <div className="flex h-[280px] w-[320px] flex-col items-start overflow-hidden rounded-lg border border-accent">
-              <img
-                src="https://global-mt.ru/upload/iblock/99e/nqmjgop6u1sj2eiszy08vnuh8jsqdvcv/kls_martin_group.png"
-                alt=""
-                className="h-[196px] w-[320px] bg-white object-contain"
-              />
-              <div className="p-5 text-start">
-                <p className="text-primaryBlack">
-                  НМИЦ онкологии им. Н.Н. <br /> Блохина
-                </p>
+          {[
+            "https://global-mt.ru/upload/iblock/99e/nqmjgop6u1sj2eiszy08vnuh8jsqdvcv/kls_martin_group.png",
+            "https://global-mt.ru/upload/iblock/2aa/fz4tyn09v91peefu64isycitobwh7p04/erba_group.png",
+            "https://global-mt.ru/upload/iblock/c5b/un71fm2pu3dd750j29wk8jkq9w1utauy/image017.png",
+            "https://global-mt.ru/upload/iblock/ad3/k538egnzgcvlp25sv0xufbcce218npg6/atmos.png",
+            "https://global-mt.ru/upload/iblock/a0b/zt6p9i54fsw42u7lgqwpvdw0bpfj5pap/johnson_johnson.png",
+            "https://global-mt.ru/upload/iblock/ec0/j1go3t2m3y4hg488aqw6f5ft8qz6ph00/logo_siemens2.jpg",
+            "https://global-mt.ru/upload/iblock/d27/gi22l3fjkpzgove7qr9fz0f44sygglep/pentax_medical.png",
+          ].map((imgSrc, index) => (
+            <div key={index} className="flex items-center justify-center">
+              <div className="flex h-[280px] w-[320px] flex-col items-start overflow-hidden rounded-lg border border-accent  max-lg:w-[280px] max-lg:h-[240px] max-md:w-[320px] max-md:h-[280px]">
+                <img
+                  src={imgSrc}
+                  alt=""
+                  className="h-[196px] w-[320px] bg-white object-contain max-lg:w-[280px] max-lg:h-[156px] max-md:w-[320px] max-md:h-[196px]"
+                />
+                <div className="p-5">
+                  <p className="text-primaryBlack">
+                    НМИЦ онкологии им. Н.Н. <br /> Блохина
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
-          <div className="flex items-center justify-center">
-            <div className="flex h-[280px] w-[320px] flex-col items-start overflow-hidden rounded-lg border border-accent">
-              <img
-                src="https://global-mt.ru/upload/iblock/2aa/fz4tyn09v91peefu64isycitobwh7p04/erba_group.png"
-                alt=""
-                className="h-[196px] w-[320px] bg-white object-contain"
-              />
-              <div className="p-5">
-                <p className="text-primaryBlack">
-                  НМИЦ онкологии им. Н.Н. <br /> Блохина
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="flex items-center justify-center">
-            <div className="flex h-[280px] w-[320px] flex-col items-start overflow-hidden rounded-lg border border-accent">
-              <img
-                src="https://global-mt.ru/upload/iblock/c5b/un71fm2pu3dd750j29wk8jkq9w1utauy/image017.png"
-                alt=""
-                className="h-[196px] w-[320px] bg-white object-contain"
-              />
-              <div className="p-5">
-                <p className="text-[16px] text-primaryBlack">
-                  НМИЦ онкологии им. Н.Н. <br /> Блохина
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="flex items-center justify-center">
-            <div className="flex h-[280px] w-[320px] flex-col items-start overflow-hidden rounded-lg border border-accent">
-              <img
-                src="https://global-mt.ru/upload/iblock/ad3/k538egnzgcvlp25sv0xufbcce218npg6/atmos.png"
-                alt=""
-                className="h-[196px] w-[320px] bg-white object-contain"
-              />
-              <div className="p-5">
-                <p className="text-primaryBlack">
-                  НМИЦ онкологии им. Н.Н. <br /> Блохина
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="flex items-center justify-center">
-            <div className="flex h-[280px] w-[320px] flex-col items-start overflow-hidden rounded-lg border border-accent">
-              <img
-                src="https://global-mt.ru/upload/iblock/a0b/zt6p9i54fsw42u7lgqwpvdw0bpfj5pap/johnson_johnson.png"
-                alt=""
-                className="h-[196px] w-[320px] bg-white object-contain"
-              />
-              <div className="p-5">
-                <p className="text-[16px] text-primaryBlack">
-                  НМИЦ онкологии им. Н.Н. <br /> Блохина
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="flex items-center justify-center">
-            <div className="flex h-[280px] w-[320px] flex-col items-start overflow-hidden rounded-lg border border-accent">
-              <img
-                src="https://global-mt.ru/upload/iblock/ec0/j1go3t2m3y4hg488aqw6f5ft8qz6ph00/logo_siemens2.jpg"
-                alt=""
-                className="h-[196px] w-[320px] bg-white object-contain"
-              />
-              <div className="p-5">
-                <p className="text-primaryBlack">
-                  НМИЦ онкологии им. Н.Н. <br /> Блохина
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="flex items-center justify-center">
-            <div className="flex h-[280px] w-[320px] flex-col items-start overflow-hidden rounded-lg border border-accent">
-              <img
-                src="https://global-mt.ru/upload/iblock/d27/gi22l3fjkpzgove7qr9fz0f44sygglep/pentax_medical.png"
-                alt=""
-                className="h-[196px] w-[320px] bg-white object-contain"
-              />
-              <div className="p-5">
-                <p className="text-[16px] text-primaryBlack">
-                  НМИЦ онкологии им. Н.Н. <br /> Блохина
-                </p>
-              </div>
-            </div>
-          </div>
+          ))}
         </Slider>
-        <button className="-mt-8 ml-[580px]">hellp</button>
+        <button className="buttonG ml-[600px] -mt-9 max-xl:ml-[350px] max-lg:ml-[600px] max-md:hidden">Сертификаты</button>
       </div>
     </div>
   );

@@ -9,7 +9,7 @@ import { GrLinkNext } from "react-icons/gr";
 const NextArrow = ({ onClick }) => {
   return (
     <div
-      className="custom-arrow next-arrow border border-accent"
+      className="custom-arrow next-arrow border border-accent max-lg:hidden"
       onClick={onClick}
     >
       <GrLinkNext />
@@ -19,7 +19,7 @@ const NextArrow = ({ onClick }) => {
 const PrevArrow = ({ onClick }) => {
   return (
     <div
-      className="custom-arrow prev-arrow border border-accent"
+      className="custom-arrow prev-arrow border border-accent max-lg:hidden"
       onClick={onClick}
     >
       <GrLinkPrevious />
@@ -31,146 +31,124 @@ const EquipmentSections = () => {
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 4,
+    slidesToShow: 3,
     slidesToScroll: 1,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
+    responsive: [
+      {
+        breakpoint: 980,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
   return (
-    <div className="relative mx-auto mt-32 flex max-w-[1350px] flex-col gap-[35px] overflow-hidden pl-5">
+    <div className="relative mx-auto mt-32 flex max-w-[1350px] flex-col gap-[35px] overflow-hidden">
       <p className="text-[32px] text-primaryBlack">
         Комплексное оснащение кабинетов
       </p>
       <div className="mb-32 flex w-full flex-col items-center justify-center">
-        <Slider {...settings} className="w-full">
+        <Slider {...settings} className="w-full pl-10">
           <div className="flex items-center justify-center">
-            <div className="flex h-[465px] w-[320px] flex-col items-center overflow-hidden rounded-lg border border-accent">
+            <div className="flex h-[570px] w-[400px] flex-col items-center overflow-hidden rounded-lg border border-accent max-xl:w-[320px]">
               <img
                 src="https://global-mt.ru/local/templates/gmt/img/complex1.png"
                 alt=""
-                className="h-[320px] w-[320px]"
+                className="h-[510px] w-[400px] max-xl:w-[320px]"
               />
-              <div className="p-5">
-                <p className="text-[12px] text-secondaryGray">07.11.2022</p>
-                <p className="pb-3 pt-1 text-[18px] font-semibold text-black">
-                  Название новости
-                </p>
-                <p className="text-secondaryGray">
-                  Допускает внедрение поэтапного и развития общества.
-                </p>
+              <div className="flex w-full items-center justify-start p-5">
+                <p className="text-black">Экспресс лаборатория</p>
               </div>
             </div>
           </div>
           <div className="flex items-center justify-center">
-            <div className="tems-center flex h-[465px] w-[320px] flex-col overflow-hidden rounded-lg border border-accent">
+            <div className="tems-center flex h-[570px] w-[400px] flex-col overflow-hidden rounded-lg border border-accent max-xl:w-[320px]">
               <img
                 src="https://global-mt.ru/local/templates/gmt/img/complex2.png"
                 alt=""
-                className="h-[320px] w-[320px]"
+                className="h-[510px] w-[400px] max-xl:w-[320px]"
               />
-              <div className="p-5">
-                <p className="text-[12px] text-secondaryGray">07.11.2022</p>
-                <p className="pb-3 pt-1 text-[18px] font-semibold text-black">
-                  Название новости
-                </p>
-                <p className="text-secondaryGray">
-                  Допускает внедрение поэтапного и развития общества.
-                </p>
+              <div className="flex w-full items-center justify-start p-5">
+                <p className="text-black">Экспресс лаборатория</p>
               </div>
             </div>
           </div>
           <div className="flex items-center justify-center">
-            <div className="flex h-[465px] w-[320px] flex-col items-center overflow-hidden rounded-lg border border-accent">
+            <div className="flex h-[570px] w-[400px] flex-col items-center overflow-hidden rounded-lg border border-accent max-xl:w-[320px]">
               <img
                 src="https://global-mt.ru/local/templates/gmt/img/complex3.png"
                 alt=""
-                className="h-[320px] w-[320px]"
+                className="h-[510px] w-[400px] max-xl:w-[320px]"
               />
-              <div className="p-5">
-                <p className="text-[12px] text-secondaryGray">07.11.2022</p>
-                <p className="pb-3 pt-1 text-[18px] font-semibold text-black">
-                  Название новости
-                </p>
-                <p className="text-secondaryGray">
-                  Допускает внедрение поэтапного и развития общества.
-                </p>
+              <div className="flex w-full items-center justify-start p-5">
+                <p className="text-black">Экспресс лаборатория</p>
               </div>
             </div>
           </div>
           <div className="flex items-center justify-center">
-            <div className="flex h-[465px] w-[320px] flex-col items-center overflow-hidden rounded-lg border border-accent">
+            <div className="flex h-[570px] w-[400px] flex-col items-center overflow-hidden rounded-lg border border-accent max-xl:w-[320px]">
               <img
                 src="https://global-mt.ru/local/templates/gmt/img/complex1.png"
                 alt=""
-                className="h-[320px] w-[320px]"
+                className="h-[510px] w-[400px] max-xl:w-[320px]"
               />
-              <div className="p-5">
-                <p className="text-[12px] text-secondaryGray">07.11.2022</p>
-                <p className="pb-3 pt-1 text-[18px] font-semibold text-black">
-                  Название новости
-                </p>
-                <p className="text-secondaryGray">
-                  Допускает внедрение поэтапного и развития общества.
-                </p>
+              <div className="flex w-full items-center justify-start p-5">
+                <p className="text-black">Экспресс лаборатория</p>
               </div>
             </div>
           </div>
           <div className="flex items-center justify-center">
-            <div className="flex h-[465px] w-[320px] flex-col items-center overflow-hidden rounded-lg border border-accent">
+            <div className="flex h-[570px] w-[400px] flex-col items-center overflow-hidden rounded-lg border border-accent max-xl:w-[320px]">
               <img
                 src="https://global-mt.ru/local/templates/gmt/img/complex2.png"
                 alt=""
-                className="h-[320px] w-[320px]"
+                className="h-[510px] w-[400px] max-xl:w-[320px]"
               />
-              <div className="p-5">
-                <p className="text-[12px] text-secondaryGray">07.11.2022</p>
-                <p className="pb-3 pt-1 text-[18px] font-semibold text-black">
-                  Название новости
-                </p>
-                <p className="text-secondaryGray">
-                  Допускает внедрение поэтапного и развития общества.
-                </p>
+              <div className="flex w-full items-center justify-start p-5">
+                <p className="text-black">Экспресс лаборатория</p>
               </div>
             </div>
           </div>
           <div className="flex items-center justify-center">
-            <div className="flex h-[465px] w-[320px] flex-col items-center overflow-hidden rounded-lg border border-accent">
+            <div className="flex h-[570px] w-[400px] flex-col items-center overflow-hidden rounded-lg border border-accent max-xl:w-[320px]">
               <img
                 src="https://global-mt.ru/local/templates/gmt/img/complex2.png"
                 alt=""
-                className="h-[320px] w-[320px]"
+                className="h-[510px] w-[400px] max-xl:w-[320px]"
               />
-              <div className="p-5">
-                <p className="text-[12px] text-secondaryGray">07.11.2022</p>
-                <p className="pb-3 pt-1 text-[18px] font-semibold text-black">
-                  Название новости
-                </p>
-                <p className="text-secondaryGray">
-                  Допускает внедрение поэтапного и развития общества.
-                </p>
+              <div className="flex w-full items-center justify-start p-5">
+                <p className="text-black">Экспресс лаборатория</p>
               </div>
             </div>
           </div>
           <div className="flex items-center justify-center">
-            <div className="flex h-[465px] w-[320px] flex-col items-center overflow-hidden rounded-lg border border-accent">
+            <div className="flex h-[570px] w-[400px] flex-col items-center overflow-hidden rounded-lg border border-accent max-xl:w-[320px]">
               <img
                 src="https://global-mt.ru/local/templates/gmt/img/complex3.png"
                 alt=""
-                className="h-[320px] w-[320px]"
+                className="h-[510px] w-[400px] max-xl:w-[320px]"
               />
-              <div className="p-5">
-                <p className="text-[12px] text-secondaryGray">07.11.2022</p>
-                <p className="pb-3 pt-1 text-[18px] font-semibold text-black">
-                  Название новости
-                </p>
-                <p className="text-secondaryGray">
-                  Допускает внедрение поэтапного и развития общества.
-                </p>
+              <div className="flex w-full items-center justify-start p-5">
+                <p className="text-black">Экспресс лаборатория</p>
               </div>
             </div>
           </div>
         </Slider>
-        <button className="-mt-8 ml-[580px]">hellp</button>
+        <div className="-mt-9 flex items-center gap-5 pl-[800px] max-xl:pl-[700px] max-lg:mx-auto max-lg:mt-6 max-lg:flex-col max-lg:p-0">
+          <button className="buttonW">Бесплатная консультация</button>
+          <button className="buttonG">Рассчитать стоимость</button>
+        </div>
       </div>
     </div>
   );

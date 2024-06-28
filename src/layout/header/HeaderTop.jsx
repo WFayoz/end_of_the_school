@@ -2,7 +2,7 @@ import React from "react";
 
 const HeaderTop = () => {
   return (
-    <div className="flex items-center justify-between pt-4">
+    <div className="flex items-center justify-between pt-4 max-lg:hidden">
       <ul className="flex items-center justify-start gap-5">
         <li className="text-secondaryGray">О компании</li>
         <li className="text-secondaryGray">Доставка</li>

@@ -44,8 +44,8 @@ const FormSection = () => {
             />
           </form>
           <div className="mt-12 flex flex-row items-start justify-between border-t border-accent pt-8">
-            <button className="">Отправить</button>
-            <div className="text-[12px] text-secondaryGray">
+            <button className="buttonG">Отправить</button>
+            <div className="text-[11px] text-secondaryGray">
               Нажимая «Отправить», я соглашаюсь c обработкой персональных данных{" "}
               <br /> на условиях{" "}
               <span className="text-primaryGreen">

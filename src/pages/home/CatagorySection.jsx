@@ -2,45 +2,58 @@ import React from "react";
 
 const CatagorySection = () => {
   return (
-    <div className="max-w-[1350px] px-5 mx-auto items-center justify-center mt-36 ">
-      <div className="w-full flex items-center justify-between">
-        <p className="text-primaryBlack text-[32px]">Популярные категории</p>
-        <button>Все категории</button>
+    <div className="mx-auto mt-36 max-w-[1350px] items-center justify-center px-5">
+      <div className="flex w-full items-center justify-between">
+        <p className="text-[32px] text-primaryBlack">Популярные категории</p>
+        <button className="hidden sm:block buttonG">Все категории</button>
       </div>
-      <div className="flex flex-row gap-3  justify-between  mt-[45px]">
-        <div className="flex flex-col items-center justify-between">
-          <div className="bg-primaryCream w-[320px] h-[304px] border border-accent rounded-lg">
-            <img src="" alt="img" className="w-full h-[220px]" />
-            <p className="text-primaryBlack p-5">Дерматологическое <br /> оборудование</p>
-          </div>
-          <div className="bg-primaryCream w-[320px] h-[304px] border border-accent rounded-lg">
-            <img src="" alt="img" className="w-full h-[220px]" />
-            <p className="text-primaryBlack p-5">Дерматологическое <br /> оборудование</p>
-          </div>
-        </div>
-        <div className="w-[320px] h-[618px] bg-primaryCream border border-accent rounded-lg">
-            <img src="" alt="img" className="w-full h-[534px]" />
-            <p className="text-primaryBlack p-5">
-            Дерматологическое оборудование
+      <div className="mt-[45px] grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="flex flex-col gap-3">
+          <div className="flex-1 rounded-lg border border-accent bg-primaryCream">
+            <img src="" alt="img" className="h-[220px] w-full" />
+            <p className="p-5 text-primaryBlack">
+              Дерматологическое <br /> оборудование
             </p>
+          </div>
+          <div className="flex-1 rounded-lg border border-accent bg-primaryCream">
+            <img src="" alt="img" className="h-[220px] w-full" />
+            <p className="p-5 text-primaryBlack">
+              Дерматологическое <br /> оборудование
+            </p>
+          </div>
         </div>
-        <div className="flex flex-col items-center justify-between">
-          <div className="bg-primaryCream w-[320px] h-[304px] border border-accent rounded-lg">
-            <img src="" alt="img" className="w-full h-[220px]" />
-            <p className="text-primaryBlack p-5">Дерматологическое <br /> оборудование</p>
+        <div className="flex flex-1 flex-col rounded-lg border border-accent bg-primaryCream">
+          <img src="" alt="img" className="h-[534px] w-full" />
+          <p className="p-5 text-primaryBlack">
+            Дерматологическое оборудование
+          </p>
+        </div>
+        <div className="flex flex-col gap-3">
+          <div className="flex-1 rounded-lg border border-accent bg-primaryCream">
+            <img src="" alt="img" className="h-[220px] w-full" />
+            <p className="p-5 text-primaryBlack">
+              Дерматологическое <br /> оборудование
+            </p>
           </div>
-          <div className="bg-primaryCream w-[320px] h-[304px] border border-accent rounded-lg">
-            <img src="" alt="img" className="w-full h-[220px]" />
-            <p className="text-primaryBlack p-5">Дерматологическое <br /> оборудование</p>
+          <div className="flex-1 rounded-lg border border-accent bg-primaryCream">
+            <img src="" alt="img" className="h-[220px] w-full" />
+            <p className="p-5 text-primaryBlack">
+              Дерматологическое <br /> оборудование
+            </p>
           </div>
-        </div> <div className="flex flex-col items-center justify-between">
-          <div className="bg-primaryCream w-[320px] h-[304px] border border-accent rounded-lg">
-            <img src="" alt="img" className="w-full h-[220px]" />
-            <p className="text-primaryBlack p-5">Дерматологическое <br /> оборудование</p>
+        </div>
+        <div className="flex flex-col gap-3">
+          <div className="flex-1 rounded-lg border border-accent bg-primaryCream">
+            <img src="" alt="img" className="h-[220px] w-full" />
+            <p className="p-5 text-primaryBlack">
+              Дерматологическое <br /> оборудование
+            </p>
           </div>
-          <div className="bg-primaryCream w-[320px] h-[304px] border border-accent rounded-lg">
-            <img src="" alt="img" className="w-full h-[220px]" />
-            <p className="text-primaryBlack p-5">Дерматологическое <br /> оборудование</p>
+          <div className="flex-1 rounded-lg border border-accent bg-primaryCream">
+            <img src="" alt="img" className="h-[220px] w-full" />
+            <p className="p-5 text-primaryBlack">
+              Дерматологическое <br /> оборудование
+            </p>
           </div>
         </div>
       </div>

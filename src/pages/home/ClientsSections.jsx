@@ -56,11 +56,11 @@ const clients = [
 
 const Client = () => (
   <div className="mt-36 bg-accent py-24">
-    <div className="mx-auto flex max-w-[1350px] items-start justify-between px-5">
-      <p className="w-1/2 text-start text-[30px] text-primaryBlack">
+    <div className="mx-auto flex max-w-[1350px] items-start justify-between px-5 max-lg:flex-col">
+      <p className="w-1/2 text-start text-[30px] text-primaryBlack max-lg:text-[26px] max-md:text-[24px]">
         Наши клиенты
       </p>
-      <div className="w-1/2 items-start text-[48px] text-primaryBlack">
+      <div className=" items-start text-[48px] text-primaryBlack max-lg:text-[40px] max-md:text-[32px] max-md:mt-5 max-sm:text-[26px]">
         БОЛЕЕ <span className="text-primaryGreen">5000</span> <br />
         УСПЕШНЫХ ПРОЕКТОВ
       </div>
