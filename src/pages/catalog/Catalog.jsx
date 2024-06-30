@@ -8,6 +8,7 @@ import SubscribeSection from "../reusables/SubscribeSection";
 import AboutSection from "../reusables/AboutSection";
 import EquipmentSections from "../reusables/EquipmentSections";
 import CatalogHero from "./CatalogHero";
+import Products from "../reusables/Products";
 
 const Catalog = () => {
   return (
@@ -15,6 +16,7 @@ const Catalog = () => {
       <CatalogHero/>
       <EquipmentSections />
       <OffersSection />
+      <Products/>
       <Client />
       <BrandsSection />
       <AboutSection />

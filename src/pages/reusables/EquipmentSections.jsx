@@ -54,7 +54,7 @@ const EquipmentSections = () => {
     ],
   };
   return (
-    <div className="relative mx-auto  flex max-w-[1350px] flex-col gap-[35px] overflow-hidden px-5">
+    <div className="relative mx-auto mt-36 flex max-w-[1350px] flex-col gap-[35px] overflow-hidden px-5">
       <p className="text-[32px] text-primaryBlack max-md:px-5 max-md:text-[28px]">
         Комплексное оснащение кабинетов
       </p>

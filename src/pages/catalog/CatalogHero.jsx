@@ -1,123 +1,42 @@
 import React from "react";
+import catalogTypes from '../../services/catalogTypes'
+import { FaAngleRight } from "react-icons/fa";
+import data from '../../services/data'
+
 
 const CatalogHero = () => {
   return (
-    <div className="mx-auto flex w-full max-w-[1350px] items-center justify-between">
-      <div className="w-[320px] max-xl:hidden"></div>
-      <div className="mx-auto mt-36 w-full px-5">
-        <div className="mt-[45px] grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          <div className="flex flex-col gap-6">
-            <div className="w-full flex-1 rounded-lg border border-accent bg-primaryCream">
-              <img
-                src=""
-                alt="img"
-                className="h-[220px] w-full rounded-t-lg object-cover"
-              />
-              <p className="p-5 text-primaryBlack">
-                Дерматологическое <br /> оборудование
-              </p>
-            </div>
-            <div className="w-full flex-1 rounded-lg border border-accent bg-primaryCream">
-              <img
-                src=""
-                alt="img"
-                className="h-[220px] w-full rounded-t-lg object-cover"
-              />
-              <p className="p-5 text-primaryBlack">
-                Дерматологическое <br /> оборудование
-              </p>
-            </div>
-          </div>
-          <div className="flex flex-col gap-6">
-            <div className="w-full flex-1 rounded-lg border border-accent bg-primaryCream">
-              <img
-                src=""
-                alt="img"
-                className="h-[220px] w-full rounded-t-lg object-cover"
-              />
-              <p className="p-5 text-primaryBlack">
-                Дерматологическое <br /> оборудование
-              </p>
-            </div>
-            <div className="w-full flex-1 rounded-lg border border-accent bg-primaryCream">
-              <img
-                src=""
-                alt="img"
-                className="h-[220px] w-full rounded-t-lg object-cover"
-              />
-              <p className="p-5 text-primaryBlack">
-                Дерматологическое <br /> оборудование
-              </p>
-            </div>
-          </div>
-          <div className="flex w-full flex-col rounded-lg border border-accent bg-primaryCream">
-            <img
-              src=""
-              alt="img"
-              className="h-[534px] w-full rounded-t-lg object-cover"
-            />
-            <p className="p-5 text-primaryBlack">
-              Дерматологическое оборудование
-            </p>
-          </div>
-        </div>
-        <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          <div className="flex w-full flex-col rounded-lg border border-accent bg-primaryCream">
-            <img
-              src=""
-              alt="img"
-              className="h-[534px] w-full rounded-t-lg object-cover"
-            />
-            <p className="p-5 text-primaryBlack">
-              Дерматологическое оборудование
-            </p>
-          </div>
-          <div className="flex flex-col gap-6">
-            <div className="w-full flex-1 rounded-lg border border-accent bg-primaryCream">
-              <img
-                src=""
-                alt="img"
-                className="h-[220px] w-full rounded-t-lg object-cover"
-              />
-              <p className="p-5 text-primaryBlack">
-                Дерматологическое <br /> оборудование
-              </p>
-            </div>
-            <div className="w-full flex-1 rounded-lg border border-accent bg-primaryCream">
-              <img
-                src=""
-                alt="img"
-                className="h-[220px] w-full rounded-t-lg object-cover"
-              />
-              <p className="p-5 text-primaryBlack">
-                Дерматологическое <br /> оборудование
-              </p>
-            </div>
-          </div>
-          <div className="flex flex-col gap-6">
-            <div className="w-full flex-1 rounded-lg border border-accent bg-primaryCream">
-              <img
-                src=""
-                alt="img"
-                className="h-[220px] w-full rounded-t-lg object-cover"
-              />
-              <p className="p-5 text-primaryBlack">
-                Дерматологическое <br /> оборудование
-              </p>
-            </div>
-            <div className="w-full flex-1 rounded-lg border border-accent bg-primaryCream">
-              <img
-                src=""
-                alt="img"
-                className="h-[220px] w-full rounded-t-lg object-cover"
-              />
-              <p className="p-5 text-primaryBlack">
-                Дерматологическое <br /> оборудование
-              </p>
-            </div>
-          </div>
-        </div>
+    <div className="mx-auto mt-8 flex w-full gap-3 max-w-[1350px] items-start justify-between px-5">
+      <div className="w-[320px] p-4 max-xl:hidden border border-accent rounded-xl">
+        <p>Направления</p>
+        <div className="w-full border border-secondaryGray my-5"></div>
+        <ul className="w-full flex flex-col gap-2">
+      {catalogTypes.map((item, index) => (
+        <li key={index} className="flex w-full items-center justify-between text-[14px] text-primaryBlack">
+          <p>{item}</p>
+          <FaAngleRight className="text-[14px] text-secondaryGray"/>
+        </li>
+      ))}
+    </ul>
       </div>
+      <div className="mx-auto w-full">
+      <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 max-md:gap-6">
+        {data.slice(0,9).map((item) => (
+          <div key={item.id} className="flex flex-col gap-3">
+            <div className="w-full flex-1 rounded-lg border border-accent bg-primaryCream">
+              <img
+                src={item.img}
+                alt={item.title}
+                className="h-[220px] w-full rounded-t-lg object-cover"
+              />
+              <p className="p-5 text-primaryBlack">
+                {item.title} <br />
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
     </div>
   );
 };

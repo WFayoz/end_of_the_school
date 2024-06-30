@@ -2,16 +2,17 @@ import React from "react";
 import burger from "../../../public/icons/burger.svg";
 import location from "../../../public/icons/location.svg";
 import { FiPhone } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
 
 const HeaderBottom = () => {
   return (
     <div className="flex items-center justify-between  pb-4 max-md:hidden">
       <div className="flex list-none gap-5 text-primaryBlack max-xl:gap-3">
-        <div className="flex list-none">
+        <Link to={"/catalog"} className="flex list-none">
           <img src={burger} alt="Burger" />
           Каталог
-        </div>
+        </Link>
         <li>Производители</li>
         <li>Кабинеты под ключ</li>
         <li>Услуги</li>

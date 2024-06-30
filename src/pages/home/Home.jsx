@@ -9,6 +9,7 @@ import EquipmentSections from "../reusables/EquipmentSections";
 import FormSection from "../reusables/FormSection";
 import SubscribeSection from "../reusables/SubscribeSection";
 import PreviousNextMethods from "./Banner";
+import Products from "../reusables/Products";
 
 const Home = () => {
   return (
@@ -17,6 +18,7 @@ const Home = () => {
       <CatagorySection />
       <EquipmentSections />
       <OffersSection />
+      <Products />
       <Client />
       <BrandsSection />
       <AboutSection />

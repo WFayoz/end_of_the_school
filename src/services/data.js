@@ -1,4 +1,4 @@
-export const productData = [
+const productData = [
   {
     id: 1,
     title: "Анализатор мочи MIND UA-66",
@@ -258,3 +258,5 @@ export const productData = [
     seriesNumber: "12374",
   },
 ];
+
+export default productData;

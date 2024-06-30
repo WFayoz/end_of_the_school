@@ -14,8 +14,6 @@ const Header = () => {
         <HeaderBottom />
       </div>
     </div>
-
-
   );
 };
 
