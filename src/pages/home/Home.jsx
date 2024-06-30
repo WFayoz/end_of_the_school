@@ -1,31 +1,28 @@
 import React from "react";
 import CatagorySection from "./CatagorySection";
-import OffersSection from "./OffersSection";
-import Client from "./ClientsSections";
-import AboutSection from "./AboutSection";
-import NewsSection from "./NewsSection";
-import BrandsSection from "./BrandsSection";
-import EquipmentSections from "./EquipmentSections";
-import FormSection from "./FormSection";
-import SubscribeSection from "./SubscribeSection";
+import OffersSection from "../reusables/OffersSection";
+import Client from "../reusables/ClientsSections";
+import AboutSection from "../reusables/AboutSection";
+import NewsSection from "../reusables/NewsSection";
+import BrandsSection from "../reusables/BrandsSection";
+import EquipmentSections from "../reusables/EquipmentSections";
+import FormSection from "../reusables/FormSection";
+import SubscribeSection from "../reusables/SubscribeSection";
+import PreviousNextMethods from "./Banner";
 
 const Home = () => {
   return (
     <div>
-      {/* <CatagorySection /> */}
-    
-      {/* <EquipmentSections/> */}
-      <div className="mb-80">
-
-</div>
-      {/* <OffersSection />
-      <Client /> */}
+      <PreviousNextMethods />
+      <CatagorySection />
+      <EquipmentSections />
+      <OffersSection />
+      <Client />
       <BrandsSection />
       <AboutSection />
       <NewsSection />
-      <FormSection/>
-      <SubscribeSection/>
-      
+      <FormSection />
+      <SubscribeSection />
     </div>
   );
 };

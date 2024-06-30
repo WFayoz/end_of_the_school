@@ -1,7 +1,6 @@
 import React from "react";
-import { FaWikipediaW } from "react-icons/fa";
+import { FaWikipediaW, FaWhatsapp } from "react-icons/fa";
 import { PiTelegramLogoLight } from "react-icons/pi";
-import { FaWhatsapp } from "react-icons/fa";
 import mastercard from "../../../public/icons/mastercard.svg";
 import visa from "../../../public/icons/visa.svg";
 import mir from "../../../public/icons/mir.svg";
@@ -10,11 +9,11 @@ const Footer = () => {
   return (
     <div className="mx-auto w-full bg-primaryGreen pt-10">
       <div className="mx-auto max-w-[1350px] px-5">
-        <div className="flex justify-between">
-          <div className="text-[14px] text-white">
+        <div className="flex flex-wrap justify-between">
+          <div className="mb-10 w-full text-[14px] text-white md:w-auto">
             <p className="pb-5 font-semibold">Покупателям</p>
             <div className="w-[210px] border border-white"></div>
-            <div className="mt-5 flex gap-14">
+            <div className="mt-5 flex flex-wrap gap-5 md:gap-14">
               <ul className="flex flex-col gap-2">
                 <li>О компании</li>
                 <li>Сертификаты</li>
@@ -34,10 +33,10 @@ const Footer = () => {
               </ul>
             </div>
           </div>
-          <div className="text-[14px] text-white">
+          <div className="mb-10 w-full text-[14px] text-white md:w-auto">
             <p className="pb-5 font-semibold">Каталог</p>
-            <div className="w-[650px] border border-white"></div>
-            <div className="mt-5 flex gap-14">
+            <div className="w-full border border-white md:w-[650px]"></div>
+            <div className="mt-5 flex flex-wrap gap-5 md:gap-14">
               <ul className="flex flex-col gap-2">
                 <li>Реанимация</li>
                 <li>Хирургия</li>
@@ -63,10 +62,10 @@ const Footer = () => {
               </ul>
             </div>
           </div>
-          <div className="text-[14px] text-white">
+          <div className="w-full text-[14px] text-white md:w-auto">
             <p className="pb-5 font-semibold">Контакты</p>
             <div className="w-[210px] border border-white"></div>
-            <div className="mt-5 flex gap-14">
+            <div className="mt-5 flex flex-wrap gap-5 md:gap-14">
               <ul className="flex flex-col gap-2">
                 <li className="font-bold">Адрес:</li>
                 <li>г. Москва, ул. Московская, д. 35 </li>
@@ -84,14 +83,14 @@ const Footer = () => {
           </div>
         </div>
         <div className="mt-20 border-t border-primaryWhite py-5">
-          <div className="flex justify-between text-[14px] text-primaryWhite">
-            <div>
+          <div className="flex flex-wrap justify-between text-[14px] text-primaryWhite">
+            <div className="mb-10 md:mb-0">
               <img
                 src="https://global-mt.ru/local/templates/gmt/img/Logo2.svg"
                 alt=""
               />
             </div>
-            <div>
+            <div className="mb-10 md:mb-0">
               <p>Мы в соцсетях</p>
               <div className="mt-2 flex gap-3">
                 <FaWikipediaW className="bg-primaryWhite text-[20px] font-bold text-primaryGreen" />
@@ -99,7 +98,7 @@ const Footer = () => {
                 <FaWhatsapp className="bg-primaryWhite text-[20px] font-bold text-primaryGreen" />
               </div>
             </div>
-            <div className="flex gap-20">
+            <div className="flex flex-wrap gap-5 md:gap-20">
               <ul className="flex flex-col gap-2">
                 <li>Партнерская программа</li>
                 <li>Оптовые продажи</li>
@@ -112,7 +111,7 @@ const Footer = () => {
               </ul>
               <ul className="flex flex-col gap-2">
                 <li className="font-bold">Способы оплаты</li>
-                <div className="mt-2 flex gap-2">
+                <div className="mt-2 flex flex-wrap gap-2">
                   <img src={mastercard} alt="" />
                   <img src={visa} alt="" />
                   <img src={mir} alt="" />
@@ -120,11 +119,11 @@ const Footer = () => {
               </ul>
             </div>
           </div>
-          <div className="mt-20 flex w-full items-end justify-between">
-            <p className="text-[14px] text-white">
+          <div className="mt-20 flex flex-wrap justify-between text-white">
+            <p className="text-[14px]">
               © 2022 Медоборудование <br /> Все права защищены
             </p>
-            <p className="text-[12px] text-white opacity-50">
+            <p className="text-[12px] opacity-50">
               Информация на данном сайте носит справочный характер и не является
               публичной офертой, определяемой положениями Статьи 437
               Гражданского кодекса Российской Федерации

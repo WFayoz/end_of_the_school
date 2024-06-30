@@ -13,7 +13,7 @@ const Accordion = styled((props) => (
   borderLeft: `none`,
   borderRight: `none`,
   borderBottom: `none`,
-  "&:first-child": {
+  "&:first-of-type": {
     borderTop: 0,
   },
   "&::before": {
@@ -31,8 +31,6 @@ const AccordionSummary = styled((props) => (
   flexDirection: "row",
   "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded": {
     transform: "rotate(45deg)",
-    background: "white",
-    borderRadius: "50%",
   },
   "& .MuiAccordionSummary-content": {
     marginLeft: theme.spacing(1),

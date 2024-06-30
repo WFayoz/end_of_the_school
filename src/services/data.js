@@ -5,6 +5,7 @@ export const productData = [
     img: `https://global-mt.ru/upload/iblock/207/hr2k4qvsduw97pc25maoxgijvdisav4v.jpg`,
     category: "Новинки",
     price: 300000,
+    seriesNumber: "12345",
   },
   {
     id: 2,
@@ -13,6 +14,7 @@ export const productData = [
     category: "Акции",
     price: 24000,
     oldprice: 28000,
+    seriesNumber: "12346",
   },
   {
     id: 3,
@@ -20,6 +22,7 @@ export const productData = [
     img: `https://global-mt.ru/upload/iblock/fe6/itjcpca4y9tp65rvv39762wocmb0x02e.jpg`,
     category: "Новинки",
     price: 392300,
+    seriesNumber: "12347",
   },
   {
     id: 4,
@@ -27,6 +30,7 @@ export const productData = [
     img: `https://global-mt.ru/upload/iblock/cd0/sbvrzjap6kqu0b0bh09pod3pdniwre02.jpg`,
     category: "Новинки",
     price: 56000,
+    seriesNumber: "12348",
   },
   {
     id: 5,
@@ -35,6 +39,7 @@ export const productData = [
     category: "Акции",
     price: 220000,
     oldprice: 224000,
+    seriesNumber: "12349",
   },
   {
     id: 6,
@@ -42,6 +47,7 @@ export const productData = [
     img: `https://global-mt.ru/upload/iblock/8e6/uythew6glffk1ywe9uwob1b2aaxoo6ya.jpg`,
     category: "Хиты продаж",
     price: 23600,
+    seriesNumber: "12350",
   },
   {
     id: 7,
@@ -50,6 +56,7 @@ export const productData = [
     category: "Акции",
     price: 402000,
     oldprice: 401000,
+    seriesNumber: "12351",
   },
   {
     id: 8,
@@ -57,6 +64,7 @@ export const productData = [
     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTR9JOXbKf08e-oxemFtmsvN-lUOdJ8yu3kAw&s",
     category: "Новинки",
     price: 458000,
+    seriesNumber: "12352",
   },
   {
     id: 9,
@@ -64,6 +72,7 @@ export const productData = [
     img: "https://media.istockphoto.com/id/1281389365/photo/blood-pressure-gauge.jpg?s=612x612&w=0&k=20&c=2vaSXGDF649H_UcFnNJ2YyJWmKY0p4FQDgk8PAKHZIA=",
     category: "Новинки",
     price: 16000,
+    seriesNumber: "12353",
   },
   {
     id: 10,
@@ -71,6 +80,7 @@ export const productData = [
     img: "https://www.ciamedical.com/insights/content/uploads/2016/02/sss40.png",
     category: "Хиты продаж",
     price: 23400,
+    seriesNumber: "12354",
   },
   {
     id: 11,
@@ -78,6 +88,7 @@ export const productData = [
     img: "https://global-mt.ru/upload/iblock/a4b/84vuhast5808oq0an2ih27qevkqb8lwp.png",
     category: "Новинки",
     price: 320010,
+    seriesNumber: "12355",
   },
   {
     id: 12,
@@ -86,6 +97,7 @@ export const productData = [
     category: "Акции",
     price: 785200,
     oldprice: 788000,
+    seriesNumber: "12356",
   },
   {
     id: 13,
@@ -93,6 +105,7 @@ export const productData = [
     img: "https://www.ciamedical.com/insights/content/uploads/2016/02/sss72.png",
     category: "Хиты продаж",
     price: 54860,
+    seriesNumber: "12357",
   },
   {
     id: 14,
@@ -100,6 +113,7 @@ export const productData = [
     img: "https://www.ciamedical.com/insights/content/uploads/2016/02/sss56.png",
     category: "Новинки",
     price: 89040,
+    seriesNumber: "12358",
   },
   {
     id: 15,
@@ -107,6 +121,7 @@ export const productData = [
     img: "https://global-mt.ru/upload/iblock/c6e/0pordpcsv1m0eejjpk0uie7ftwusdl2k.jpg",
     category: "Новинки",
     price: 320450,
+    seriesNumber: "12359",
   },
   {
     id: 16,
@@ -115,6 +130,7 @@ export const productData = [
     category: "Акции",
     price: 84860,
     oldprice: 85000,
+    seriesNumber: "12360",
   },
   {
     id: 17,
@@ -122,6 +138,7 @@ export const productData = [
     img: "https://global-mt.ru/upload/iblock/994/up35t6hkl0i48yv6vzobk5q776fmkfo3.png",
     category: "Новинки",
     price: 77500,
+    seriesNumber: "12361",
   },
   {
     id: 18,
@@ -129,6 +146,7 @@ export const productData = [
     img: "https://global-mt.ru/upload/iblock/59a/ityne23377ryop131c7midefx80suksh.jpg",
     category: "Хиты продаж",
     price: 81400,
+    seriesNumber: "12362",
   },
   {
     id: 19,
@@ -137,6 +155,7 @@ export const productData = [
     category: "Акции",
     price: 87400,
     oldprice: 88000,
+    seriesNumber: "12363",
   },
   {
     id: 20,
@@ -144,6 +163,7 @@ export const productData = [
     img: "https://global-mt.ru/upload/iblock/1b2/o4dt42ncygysdmmau7jr8rizq7uftkou.jpg",
     category: "Новинки",
     price: 84750,
+    seriesNumber: "12364",
   },
   {
     id: 21,
@@ -151,6 +171,7 @@ export const productData = [
     img: "https://global-mt.ru/upload/iblock/d10/dz087gckve0isg016ueeqh728qarqs0s/delphis_f.webp",
     category: "Хиты продаж",
     price: 32500,
+    seriesNumber: "12365",
   },
   {
     id: 22,
@@ -159,6 +180,7 @@ export const productData = [
     category: "Акции",
     price: 42500,
     oldprice: 43000,
+    seriesNumber: "12366",
   },
   {
     id: 23,
@@ -167,6 +189,7 @@ export const productData = [
     category: "Акции",
     price: 24500,
     oldprice: 25000,
+    seriesNumber: "12367",
   },
   {
     id: 24,
@@ -174,6 +197,7 @@ export const productData = [
     img: "https://global-mt.ru/upload/iblock/f78/7j6jox9nw5k2b89gjpa6asg4649l63se.png",
     category: "Хиты продаж",
     price: 45700,
+    seriesNumber: "12368",
   },
   {
     id: 25,
@@ -182,13 +206,15 @@ export const productData = [
     category: "Акции",
     price: 35200,
     oldprice: 36000,
+    seriesNumber: "12369",
   },
   {
     id: 26,
-    title: 'Медицинский монитор Barco Eonis 24" (MDRC-2324)',
+    title: "Медицинский монитор Barco Eonis 24 (MDRC-2324)",
     img: "https://global-mt.ru/upload/iblock/23a/tatflbuw7bewixs2qq5vje1tz519sdqj.jpg",
     category: "Новинки",
     price: 420240,
+    seriesNumber: "12370",
   },
   {
     id: 27,
@@ -196,6 +222,7 @@ export const productData = [
     img: "https://global-mt.ru/upload/iblock/ebf/aqgleom44nsherp43chdiy5ub93aybdd.jpg",
     category: "Хиты продаж",
     price: 45600,
+    seriesNumber: "12371",
   },
   {
     id: 28,
@@ -203,6 +230,7 @@ export const productData = [
     img: "https://global-mt.ru/upload/iblock/9f6/jcu7l3eet1tutps5l58q76zbvj7x2zj6.jpg",
     category: "Хиты продаж",
     price: 98000,
+    seriesNumber: "12372",
   },
   {
     id: 29,
@@ -211,6 +239,7 @@ export const productData = [
     category: "Акции",
     price: 64000,
     oldprice: 64400,
+    seriesNumber: "12373",
   },
   {
     id: 30,
@@ -218,5 +247,14 @@ export const productData = [
     img: "https://global-mt.ru/upload/iblock/0b9/bu398moo575z8w4bjc4ys2n3068n6g7q.png",
     category: "Хиты продаж",
     price: 31200,
+    seriesNumber: "12374",
+  },
+  {
+    id: 31,
+    title: "Монитор пациента Philips IntelliVue MP90",
+    img: "https://global-mt.ru/upload/iblock/0b9/bu398moo575z8w4bjc4ys2n3068n6g7q.png",
+    category: "Хиты продаж",
+    price: 31201,
+    seriesNumber: "12374",
   },
 ];

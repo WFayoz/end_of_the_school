@@ -54,8 +54,8 @@ const EquipmentSections = () => {
     ],
   };
   return (
-    <div className="relative mx-auto mt-32 flex max-w-[1350px] flex-col gap-[35px] overflow-hidden">
-      <p className="text-[32px] text-primaryBlack">
+    <div className="relative mx-auto  flex max-w-[1350px] flex-col gap-[35px] overflow-hidden px-5">
+      <p className="text-[32px] text-primaryBlack max-md:px-5 max-md:text-[28px]">
         Комплексное оснащение кабинетов
       </p>
       <div className="mb-32 flex w-full flex-col items-center justify-center">
@@ -145,7 +145,7 @@ const EquipmentSections = () => {
             </div>
           </div>
         </Slider>
-        <div className="-mt-9 flex items-center gap-5 pl-[800px] max-xl:pl-[700px] max-lg:mx-auto max-lg:mt-6 max-lg:flex-col max-lg:p-0">
+        <div className="-mt-9 flex items-center gap-5 pl-[700px] max-xl:pl-[700px] max-lg:mx-auto max-lg:mt-6 max-lg:flex-col max-lg:p-0">
           <button className="buttonW">Бесплатная консультация</button>
           <button className="buttonG">Рассчитать стоимость</button>
         </div>
