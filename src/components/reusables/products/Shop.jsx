@@ -3,8 +3,9 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { GrLinkPrevious, GrLinkNext } from "react-icons/gr";
-import data from "../../services/data";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
+import Product from "./Product";
 
 const NextArrow = ({ onClick }) => {
   return (
@@ -28,7 +29,9 @@ const PrevArrow = ({ onClick }) => {
   );
 };
 
-const Products = () => {
+const Shop = () => {
+  const { products, total } = useSelector((store) => store.basket);
+
   const settings = {
     dots: false,
     infinite: true,
@@ -99,27 +102,22 @@ const Products = () => {
           {...settings}
           className="w-full max-md:ml-[7%] max-md:flex max-md:items-center max-md:justify-center"
         >
-          {data.map((item) => (
-            <div key={item.id} className="flex items-center justify-center">
-              <div className="flex h-[520px] w-[320px] flex-col items-start overflow-hidden rounded-lg border border-accent">
-                <img
-                  src={item.img}
-                  alt={item.title}
-                  className="h-[297px] w-[320px] bg-white object-cover "
-                />
-                <div className="p-5 w-[320px]">
-                  <p className="text-primaryBlack h-[50px] ">{item.title}</p>
-                  <p className="text-secondaryGray text-[14px] pt-2">Артикул: {item.seriesNumber}</p>
-                  <p className="text-primaryBlack font-semibold text-[18px] pt-5" >{item.price.toFixed(2)} руб.</p>
-                  <button className="buttonW w-full mt-2"> Добавить в корзину</button>
-                </div>
-              </div>
-            </div>
+          {products.map((item) => (
+            <Product
+              key={item.name}
+              name={item.name}
+              id={item.id}
+              img={item.img}
+              price={item.price}
+              amount={item.amount}
+              seriesNumber={item.seriesNumber}
+              total={item.total}
+            />
           ))}
         </Slider>
         <div className="-mt-9 ml-[300px] flex gap-5 max-xl:ml-[150px] max-lg:ml-[350px] max-md:ml-0 max-md:mt-10 max-md:flex max-md:items-center max-md:justify-center max-sm:flex-col">
           <button className="buttonW">Бесплатная консультация</button>
-          <Link to={"/catalog"} className="z-10">
+          <Link to={"/catalog"} className="z-10" >
             <button className="buttonG">Все товары</button>
           </Link>
         </div>
@@ -128,4 +126,4 @@ const Products = () => {
   );
 };
 
-export default Products;
+export default Shop;

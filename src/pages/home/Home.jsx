@@ -1,30 +1,24 @@
 import React from "react";
 import CatagorySection from "./CatagorySection";
-import OffersSection from "../reusables/OffersSection";
-import Client from "../reusables/ClientsSections";
-import AboutSection from "../reusables/AboutSection";
-import NewsSection from "../reusables/NewsSection";
-import BrandsSection from "../reusables/BrandsSection";
-import EquipmentSections from "../reusables/EquipmentSections";
-import FormSection from "../reusables/FormSection";
-import SubscribeSection from "../reusables/SubscribeSection";
+import OffersSection from "../../components/reusables/OffersSection";
+import Client from "../../components/reusables/ClientsSections";
+import AboutSection from "../../components/reusables/AboutSection";
+import NewsSection from "../../components/reusables/NewsSection";
+import BrandsSection from "../../components/reusables/BrandsSection";
+import EquipmentSections from "../../components/reusables/EquipmentSections";
+import FormSection from "../../components/reusables/FormSection";
+import SubscribeSection from "../../components/reusables/SubscribeSection";
 import PreviousNextMethods from "./Banner";
-import Products from "../reusables/Products";
+import Products from "../../components/reusables/Products";
+import Shop from "../../components/reusables/products/Shop";
+import Reusables from "../../components/reusables/Reusables";
 
 const Home = () => {
   return (
     <div>
       <PreviousNextMethods />
       <CatagorySection />
-      <EquipmentSections />
-      <OffersSection />
-      <Products />
-      <Client />
-      <BrandsSection />
-      <AboutSection />
-      <NewsSection />
-      <FormSection />
-      <SubscribeSection />
+      <Reusables />
     </div>
   );
 };

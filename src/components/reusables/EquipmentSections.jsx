@@ -37,6 +37,14 @@ const EquipmentSections = () => {
     prevArrow: <PrevArrow />,
     responsive: [
       {
+        breakpoint: 1300,
+        settings: {
+          slidesToShow: 2.8,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
+      },
+      {
         breakpoint: 980,
         settings: {
           slidesToShow: 2,

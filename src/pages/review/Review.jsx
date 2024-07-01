@@ -1,14 +1,14 @@
 import React from "react";
-import CatalogHero from "./CatalogHero";
+import ProductReview from "./ProductReview";
 import Reusables from "../../components/reusables/Reusables";
 
-const Catalog = () => {
+const Review = () => {
   return (
     <div>
-      <CatalogHero />
+      <ProductReview />
       <Reusables />
     </div>
   );
 };
 
-export default Catalog;
+export default Review;

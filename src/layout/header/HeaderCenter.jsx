@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import logo from "../../../public/icons/logo.svg";
 import search from "../../../public/icons/search.svg";
 import login from "../../../public/icons/login.svg";
@@ -8,8 +8,16 @@ import basket from "../../../public/icons/basket.svg";
 import { FiPhone } from "react-icons/fi";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { updateTotal } from "../../redux/basketSlice";
 
 const HeaderCenter = () => {
+  const cart = useSelector((state) => state.basket.cart);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(updateTotal());
+  }, [cart, dispatch]);
   return (
     <div className="flex flex-col items-center justify-between">
       <div className="mb-5 flex w-full items-center justify-between md:hidden">
@@ -61,10 +69,16 @@ const HeaderCenter = () => {
             <img src={comparison} alt="" />
             <p className="max-xl:hidden">Сравнить</p>{" "}
           </div>
-          <div className="flex cursor-pointer flex-col items-center font-normal text-secondaryGray hover:text-[black]">
+          <Link
+            to="/cart"
+            className="relative flex cursor-pointer flex-col items-center font-normal text-secondaryGray hover:text-[black]"
+          >
             <img src={basket} alt="" />
+            <div className="absolute -right-1 -top-2 rounded-full bg-primaryGreen px-2 py-[0.1px] text-white">
+              {cart.length}
+            </div>
             <p className="max-xl:hidden">Корзина</p>
-          </div>
+          </Link>
         </div>
       </div>
     </div>
