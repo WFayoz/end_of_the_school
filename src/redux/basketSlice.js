@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import  storeData  from "../services/data";
+import storeData from "../services/data";
 
 const initialState = {
   products: storeData,
@@ -24,24 +24,18 @@ const basketSlice = createSlice({
         item.amount--;
       } else if (item && item.amount === 1) {
         state.cart = state.cart.filter(
-          (cartItem) => cartItem.name !== payload.name
+          (cartItem) => cartItem.name !== payload.name,
         );
       }
     },
     removeItem: (state, { payload }) => {
-      state.cart = state.cart.filter(
-        (item) => item.name !== payload.name
-      );
+      state.cart = state.cart.filter((item) => item.name !== payload.name);
     },
     addCart: (state, { payload }) => {
-      const itemInCart = state.cart.find(
-        (item) => item.name === payload.name
-      );
+      const itemInCart = state.cart.find((item) => item.name === payload.name);
       if (itemInCart) {
       } else {
-        const item = state.products.find(
-          (item) => item.name === payload.name
-        );
+        const item = state.products.find((item) => item.name === payload.name);
         if (item) {
           state.cart.push({ ...item, amount: 1 });
         }

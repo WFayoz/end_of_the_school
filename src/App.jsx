@@ -3,19 +3,28 @@ import Header from "./layout/header/Header";
 import Cart from "./pages/cart/Cart";
 import Catalog from "./pages/catalog/Catalog";
 import Home from "./pages/home/Home";
+import AboutUs from './pages/aboutUs/AboutUs'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Review from "./pages/review/Review";
+import ScrollTop from "./components/ScrollTop";
+import Delivery from "./pages/delivery/Delivery";
 
 function App() {
+  
+
   return (
     <div className="bg-primaryCream">
       <Router>
+      <ScrollTop/>
+
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/catalog" element={<Catalog />} />
-          <Route path="/review" element={<Review />} />
+          <Route path="/review/:productId" element={<Review />} />
           <Route path="/cart" element={<Cart />} />
+          <Route path="/about" element={<AboutUs />} />
+          <Route path="/delivery" element={<Delivery />} />
         </Routes>
       </Router>
       <Footer />

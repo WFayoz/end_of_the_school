@@ -7,7 +7,7 @@ import mir from "../../../public/icons/mir.svg";
 
 const Footer = () => {
   return (
-    <div className="mx-auto w-full bg-primaryGreen pt-10">
+    <div className="mx-auto w-full bg-primaryGreen pt-10 ">
       <div className="mx-auto max-w-[1350px] px-5">
         <div className="flex flex-wrap justify-between">
           <div className="mb-10 w-full text-[14px] text-white md:w-auto">

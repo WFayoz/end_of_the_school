@@ -12,6 +12,9 @@ import comparison from "../../../public/icons/comparison.svg";
 import { IoClose } from "react-icons/io5";
 
 const Cart = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const cart = useSelector((state) => state.basket.cart);
   const total = useSelector((state) => state.basket.total);
   const dispatch = useDispatch();

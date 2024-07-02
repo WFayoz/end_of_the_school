@@ -1,11 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const HeaderTop = () => {
   return (
     <div className="flex items-center justify-between pt-4 max-lg:hidden">
       <ul className="flex items-center justify-start gap-5">
-        <li className="text-secondaryGray">О компании</li>
-        <li className="text-secondaryGray">Доставка</li>
+        <Link className="text-secondaryGray" to='/about'>О компании</Link>
+        <Link to='/delivery' className="text-secondaryGray">Доставка</Link>
         <li className="text-secondaryGray">Оплата</li>
         <li className="text-secondaryGray">Гарантии</li>
         <li className="text-secondaryGray">Блог</li>

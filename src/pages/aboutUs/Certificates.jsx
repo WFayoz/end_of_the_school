@@ -1,11 +1,8 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { GrLinkPrevious, GrLinkNext } from "react-icons/gr";
-import { useSelector } from "react-redux";
-import Product from "./Product";
-import { Link } from "react-router-dom";
 
 const NextArrow = ({ onClick }) => {
   return (
@@ -29,9 +26,7 @@ const PrevArrow = ({ onClick }) => {
   );
 };
 
-const Shop = () => {
-  const { products } = useSelector((store) => store.basket);
-
+const Certificates = () => {
   const settings = {
     dots: false,
     infinite: true,
@@ -93,36 +88,37 @@ const Shop = () => {
   };
 
   return (
-    <div className="relative mx-auto mt-32 flex max-w-[1350px] gap-[40px] overflow-hidden px-5 max-lg:flex-col">
-      <div className="flex w-56 items-start justify-between max-md:mt-5">
-        <p className="w-56 text-[28px] text-primaryBlack">Каталог товаров</p>
+    <div className="relative mx-auto items-start mt-32 flex max-w-[1350px] gap-[135px] overflow-hidden px-5 max-lg:flex-col">
+      <div className="flex w-full items-center justify-between max-md:mt-5">
+        <p className="text-[32px] text-primaryBlack w-[240px]">Сертификаты на <br /> продукцию</p>
+        <button className="buttonG md:hidden">Сертификаты</button>
       </div>
       <div className="mb-32 flex w-full flex-col items-center justify-center">
-        <Slider
-          {...settings}
-          className="w-full max-md:ml-[7%] max-md:flex max-md:items-center max-md:justify-center"
-        >
-          {products.map((item) => (
-            <Product
-              key={item.id}
-              id={item.id}
-              name={item.name}
-              img={item.img}
-              price={item.price}
-              amount={item.amount}
-              seriesNumber={item.seriesNumber}
-            />
+        <Slider {...settings} className="w-full">
+          {[
+            "https://global-mt.ru/upload/iblock/99e/nqmjgop6u1sj2eiszy08vnuh8jsqdvcv/kls_martin_group.png",
+            "https://global-mt.ru/upload/iblock/2aa/fz4tyn09v91peefu64isycitobwh7p04/erba_group.png",
+            "https://global-mt.ru/upload/iblock/c5b/un71fm2pu3dd750j29wk8jkq9w1utauy/image017.png",
+            "https://global-mt.ru/upload/iblock/ad3/k538egnzgcvlp25sv0xufbcce218npg6/atmos.png",
+            "https://global-mt.ru/upload/iblock/a0b/zt6p9i54fsw42u7lgqwpvdw0bpfj5pap/johnson_johnson.png",
+            "https://global-mt.ru/upload/iblock/ec0/j1go3t2m3y4hg488aqw6f5ft8qz6ph00/logo_siemens2.jpg",
+            "https://global-mt.ru/upload/iblock/d27/gi22l3fjkpzgove7qr9fz0f44sygglep/pentax_medical.png",
+          ].map((imgSrc, index) => (
+            <div key={index} className="flex items-center justify-center">
+              <div className="flex h-[280px] w-[210px]  bg-primaryWhite  justify-center items-start overflow-hidden rounded-lg border border-accent max-lg:h-[240px] max-lg:w-[280px] max-md:h-[280px] max-md:w-[320px]">
+                <img
+                  src={imgSrc}
+                  alt=""
+                  className="h-[248px] w-[178px] bg-white object-contain max-lg:h-[156px] max-lg:w-[280px] max-md:h-[196px] max-md:w-[320px]"
+                />
+              </div>
+            </div>
           ))}
         </Slider>
-        <div className="-mt-9 ml-[300px] flex gap-5 max-xl:ml-[150px] max-lg:ml-[350px] max-md:ml-0 max-md:mt-10 max-md:flex max-md:items-center max-md:justify-center max-sm:flex-col">
-          <button className="buttonW">Бесплатная консультация</button>
-          <Link to={"/catalog"} className="z-10">
-            <button className="buttonG">Все товары</button>
-          </Link>
-        </div>
+        
       </div>
     </div>
   );
 };
 
-export default Shop;
+export default Certificates;

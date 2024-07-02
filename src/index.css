@@ -23,12 +23,6 @@
   bottom: 0;
 }
 
-* {
-  transition: 300ms;
-  /* overflow-x: hidden; */
-margin-top: 0px;
-}
-
 .buttonG {
   padding: 11px 30px;
   border-radius: 50px;
@@ -51,7 +45,7 @@ margin-top: 0px;
 }
 
 .slick-dots li button:before {
-  font-size: 12px;
+  font-size: 15px;
 }
 
 .slick-dots li.slick-active button:before {
