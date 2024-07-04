@@ -4,10 +4,11 @@ import { PiTelegramLogoLight } from "react-icons/pi";
 import mastercard from "../../../public/icons/mastercard.svg";
 import visa from "../../../public/icons/visa.svg";
 import mir from "../../../public/icons/mir.svg";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <div className="mx-auto w-full bg-primaryGreen pt-10 ">
+    <div className="mx-auto w-full bg-primaryGreen pt-10">
       <div className="mx-auto max-w-[1350px] px-5">
         <div className="flex flex-wrap justify-between">
           <div className="mb-10 w-full text-[14px] text-white md:w-auto">
@@ -17,7 +18,7 @@ const Footer = () => {
               <ul className="flex flex-col gap-2">
                 <li>О компании</li>
                 <li>Сертификаты</li>
-                <li>Вакансии</li>
+                <Link to={"/vacancy"}>Вакансии</Link>
                 <li>Гарантии</li>
                 <li>Услуги</li>
                 <li>Акции</li>
@@ -93,9 +94,9 @@ const Footer = () => {
             <div className="mb-10 md:mb-0">
               <p>Мы в соцсетях</p>
               <div className="mt-2 flex gap-3">
-                <FaWikipediaW className="bg-primaryWhite text-[20px] font-bold text-primaryGreen" />
-                <PiTelegramLogoLight className="bg-primaryWhite text-[20px] font-bold text-primaryGreen" />
-                <FaWhatsapp className="bg-primaryWhite text-[20px] font-bold text-primaryGreen" />
+                <FaWikipediaW className="rounded-sm bg-primaryWhite text-[20px] font-bold text-primaryGreen" />
+                <PiTelegramLogoLight className="rounded-sm bg-primaryWhite text-[20px] font-bold text-primaryGreen" />
+                <FaWhatsapp className="rounded-sm bg-primaryWhite text-[20px] font-bold text-primaryGreen" />
               </div>
             </div>
             <div className="flex flex-wrap gap-5 md:gap-20">

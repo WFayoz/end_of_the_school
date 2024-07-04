@@ -2,7 +2,7 @@ import React from "react";
 import PaymentSection1 from "./PaymentSection1";
 import PaymentSection2 from "./PaymentSection2";
 import PaymentSection3 from "./PaymentSection3";
-import FormSection from "../../components/reusables/FormSection";
+import FormSection from "../../components/customComponents/FormSection";
 
 const Payment = () => {
   return (

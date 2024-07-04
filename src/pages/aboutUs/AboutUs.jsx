@@ -3,10 +3,10 @@ import HeroAbout from "./HeroAbout";
 import FactsInNums from "./FactsInNums";
 import AboutPartners from "./AboutPartners";
 import Employess from "./Employess";
-import Client from "../../components/reusables/ClientsSections";
-import OffersSection from "../../components/reusables/OffersSection";
-import BrandsSection from "../../components/reusables/BrandsSection";
-import FormSection from "../../components/reusables/FormSection";
+import Client from "../../components/customComponents/ClientsSections";
+import OffersSection from "../../components/customComponents/OffersSection";
+import BrandsSection from "../../components/customComponents/BrandsSection";
+import FormSection from "../../components/customComponents/FormSection";
 import Certificates from "./Certificates";
 
 const AboutUs = () => {
@@ -24,6 +24,7 @@ const AboutUs = () => {
       <OffersSection />
       <Certificates />
       <FormSection />
+      <div className="mb-36"></div>
     </div>
   );
 };

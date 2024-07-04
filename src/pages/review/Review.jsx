@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import ProductReview from "./ProductReview";
-import Reusables from "../../components/reusables/Reusables";
+import CustomComponents from "../../components/customComponents/CustomComponents";
 
 const Review = () => {
   useEffect(() => {
@@ -9,7 +9,7 @@ const Review = () => {
   return (
     <div>
       <ProductReview />
-      <Reusables />
+      <CustomComponents />
     </div>
   );
 };

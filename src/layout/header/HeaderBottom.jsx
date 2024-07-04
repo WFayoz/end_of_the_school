@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 const HeaderBottom = () => {
   return (
     <div className="flex items-center justify-between  pb-4 max-md:hidden">
-      <div className="flex list-none gap-5 text-primaryBlack max-xl:gap-3">
+      <div className="flex list-none gap-4  text-primaryBlack max-xl:gap-3">
         <Link to={"/catalog"} className="flex list-none">
           <img src={burger} alt="Burger" />
           Каталог

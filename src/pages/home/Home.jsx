@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import CatagorySection from "./CatagorySection";
 import PreviousNextMethods from "./Banner";
-import Reusables from "../../components/reusables/Reusables";
+import CustomComponents from "../../components/customComponents/CustomComponents";
 
 const Home = () => {
   useEffect(() => {
@@ -11,7 +11,7 @@ const Home = () => {
     <div>
       <PreviousNextMethods />
       <CatagorySection />
-      <Reusables />
+      <CustomComponents />
     </div>
   );
 };

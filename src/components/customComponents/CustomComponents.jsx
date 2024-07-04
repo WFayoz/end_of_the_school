@@ -9,7 +9,7 @@ import NewsSection from "./NewsSection";
 import FormSection from "./FormSection";
 import SubscribeSection from "./SubscribeSection";
 
-const Reusables = () => {
+const CustomComponents = () => {
   return (
     <div>
       <EquipmentSections />
@@ -25,4 +25,4 @@ const Reusables = () => {
   );
 };
 
-export default Reusables;
+export default CustomComponents;

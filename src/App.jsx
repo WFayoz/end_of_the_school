@@ -9,6 +9,8 @@ import Review from "./pages/review/Review";
 import ScrollTop from "./components/ScrollTop";
 import Delivery from "./pages/delivery/Delivery";
 import Payment from "./pages/payment /Payment";
+import Varanty from "./pages/varanty/Varanty";
+import Vacancy from "./pages/vacancy/Vacancy";
 
 function App() {
   return (
@@ -24,9 +26,11 @@ function App() {
           <Route path="/about" element={<AboutUs />} />
           <Route path="/delivery" element={<Delivery />} />
           <Route path="/payment" element={<Payment />} />
+          <Route path="/varanty" element={<Varanty />} />
+          <Route path="/vacancy" element={<Vacancy />} />
         </Routes>
+        <Footer />
       </Router>
-      <Footer />
     </div>
   );
 }

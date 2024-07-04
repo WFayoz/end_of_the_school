@@ -4,7 +4,7 @@ import DeliveryOffers from "./DeliveryOffers";
 import RulesSection from "./RulesSection";
 import DeliveryMap2 from "./DeliveryMap2";
 import DeliveryForm from "./DeliveryForm";
-import SubscribeSection from "../../components/reusables/SubscribeSection";
+import SubscribeSection from "../../components/customComponents/SubscribeSection";
 
 const Delivery = () => {
   return (

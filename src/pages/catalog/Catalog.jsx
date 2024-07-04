@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import CatalogHero from "./CatalogHero";
-import Reusables from "../../components/reusables/Reusables";
+import CustomComponents from "../../components/customComponents/CustomComponents";
 
 const Catalog = () => {
   useEffect(() => {
@@ -9,7 +9,7 @@ const Catalog = () => {
   return (
     <div>
       <CatalogHero />
-      <Reusables />
+      <CustomComponents />
     </div>
   );
 };

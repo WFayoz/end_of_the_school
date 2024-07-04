@@ -14,7 +14,9 @@ const HeaderTop = () => {
         <Link to="./payment" className="text-secondaryGray">
           Оплата
         </Link>
-        <li className="text-secondaryGray">Гарантии</li>
+        <Link to="/varanty" className="text-secondaryGray">
+          Гарантии
+        </Link>
         <li className="text-secondaryGray">Блог</li>
       </ul>
       <ul className="flex items-center justify-center gap-11">
