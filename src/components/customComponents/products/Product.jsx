@@ -13,7 +13,7 @@ const Product = ({ id, name, img, price, seriesNumber }) => {
           <img
             src={img}
             alt={name}
-            className="h-[297px] w-[320px] bg-white object-cover"
+            className="h-[297px] w-[320px] bg-white object-contain"
           />
           <div className="w-[320px] p-5">
             <p className="h-[50px] text-primaryBlack">{name}</p>
@@ -26,7 +26,7 @@ const Product = ({ id, name, img, price, seriesNumber }) => {
           </div>
         </Link>
         <button
-          className="buttonW  w-[90%]"
+          className="buttonW w-[90%]"
           onClick={() => dispatch(addCart({ name }))}
         >
           Добавить в корзину

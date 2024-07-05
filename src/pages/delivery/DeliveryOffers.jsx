@@ -4,7 +4,7 @@ import symbol6 from '../../../public/icons/symbol6.svg';
 import symbol7 from '../../../public/icons/symbol7.svg';
 import symbol8 from '../../../public/icons/symbol8.svg';
 
-const DeliveryOffers = () => {
+const OffersSection = () => {
   return (
     <div className="w-full px-5">
       <div className="mt-36 flex w-full max-w-[1350px] flex-col items-start justify-center mx-auto text-center">
@@ -39,4 +39,4 @@ const DeliveryOffers = () => {
   );
 }
 
-export default DeliveryOffers;
+export default OffersSection;

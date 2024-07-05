@@ -11,6 +11,8 @@ import Delivery from "./pages/delivery/Delivery";
 import Payment from "./pages/payment /Payment";
 import Varanty from "./pages/varanty/Varanty";
 import Vacancy from "./pages/vacancy/Vacancy";
+import Cabinet from "./pages/cabinet/Cabinet";
+import Service from "./pages/servicePage/Service";
 
 function App() {
   return (
@@ -28,6 +30,9 @@ function App() {
           <Route path="/payment" element={<Payment />} />
           <Route path="/varanty" element={<Varanty />} />
           <Route path="/vacancy" element={<Vacancy />} />
+          <Route path="/cabinet" element={<Cabinet />} />
+          <Route path="/service" element={<Service />} />
+          
         </Routes>
         <Footer />
       </Router>

@@ -17,7 +17,7 @@ const ProductReview = () => {
   };
 
   return (
-    <div className="mx-auto flex  max-w-[1350px] gap-16 px-5">
+    <div className="mx-auto flex max-w-[1350px] gap-16 px-5">
       <div className="flex h-[509px] w-[760px] items-center justify-center">
         <img
           src={product.img}

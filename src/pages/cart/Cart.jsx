@@ -22,22 +22,35 @@ const Cart = () => {
   useEffect(() => {
     dispatch(updateTotal());
   }, [cart, dispatch]);
+  
   return (
-    <div className="mx-auto w-full max-w-[1350px] px-5">
-      <h2>Cart</h2>
+    <div className="mx-auto flex w-full max-w-[1350px] justify-between px-5">
       {cart.length === 0 ? (
-        <p>Your cart is empty</p>
+        <div className="my-28 flex w-full items-start justify-between">
+          <h1 className="text-[48px] text-primaryBlack">Корзина</h1>
+          <div>
+            <h2 className="text-[30px]">Не добавлено товаров к Корзина</h2>
+            <p className="max-w-[384px] py-6 text-secondaryGray">
+              Вы можете перейти на главную страницу или воспользоваться
+              каталогом товаров
+            </p>
+            <div className="flex gap-3">
+              <button className="buttonW">На главную</button>
+              <button className="buttonG">В каталог</button>
+            </div>
+          </div>
+        </div>
       ) : (
-        <ul className="flex w-[78%] flex-col gap-3">
+        <ul className="flex w-full max-w-[980px] flex-col gap-3">
           {cart.map((item) => (
             <li
               key={item.name}
-              className="relative flex flex-row items-start gap-5 overflow-hidden rounded-xl border border-accent"
+              className="relative flex flex-row items-start gap-5 overflow-hidden h-[270px] rounded-xl border border-accent"
             >
               <img
                 src={item.img}
                 alt={item.name}
-                className="h-[237px] w-[320px] object-cover"
+                className="h-[270px] w-[320px] object-cover"
               />
               <div className="flex gap-5 p-5">
                 <div className="w-[277px] pl-1">
@@ -85,12 +98,30 @@ const Cart = () => {
           ))}
         </ul>
       )}
-      <p>{total}</p>
 
       {cart.length > 0 && (
-        <Link to="/complete" className="mt-4 text-xl text-blue-500">
-          Proceed to Complete
-        </Link>
+        <div className="w-full max-w-[320px] rounded-xl h-[270px] bg-primaryWhite px-5 py-[14px]">
+          <div className="flex items-center justify-between border-b border-accent pb-4">
+            <p>Итого</p>
+            <p>{total} руб</p>
+          </div>
+          <div className="flex items-center justify-between pt-[14px]">
+            <p>Товары (3 шт)</p>
+            <p>{total} руб</p>
+          </div>
+          <div className="flex items-center justify-between pt-2">
+            <p>Скидка</p>
+            <p>0 руб.</p>
+          </div>
+          <div>
+            <Link to="/complete" className="mt-4 flex w-full text-xl text-blue-500">
+              <button className="buttonG w-full">Оформить заказ</button>
+            </Link>
+            <Link to="/complete" className=" mt-[10px] flex w-full text-xl text-blue-500">
+              <button className="buttonW w-full">Задать вопрос</button>
+            </Link>
+          </div>
+        </div>
       )}
     </div>
   );
