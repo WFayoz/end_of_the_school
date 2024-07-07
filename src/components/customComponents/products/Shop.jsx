@@ -100,7 +100,7 @@ const Shop = () => {
       <div className="mb-32 flex w-full flex-col items-center justify-center">
         <Slider
           {...settings}
-          className="w-full max-md:ml-[7%] max-md:flex max-md:items-center max-md:justify-center"
+          className="w-full mx-3 max-md:flex max-md:items-center max-md:justify-center"
         >
           {products.map((item) => (
             <Product

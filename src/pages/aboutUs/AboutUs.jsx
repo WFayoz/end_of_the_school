@@ -20,7 +20,7 @@ const AboutUs = () => {
       <AboutPartners />
       <Employess />
       <Client />
-      <BrandsSection/>
+      <BrandsSection />
       <OffersSection />
       <Certificates />
       <FormSection />

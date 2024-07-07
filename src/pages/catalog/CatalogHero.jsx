@@ -3,7 +3,6 @@ import catalogTypes from '../../services/catalogTypes';
 import { FaAngleRight } from "react-icons/fa";
 import data from '../../services/data';
 import { Link } from "react-router-dom";
-import { useDispatch } from "react-redux";
 
 const CatalogHero = () => {
   return (
@@ -28,7 +27,7 @@ const CatalogHero = () => {
                 <img
                   src={item.img}
                   alt={item.name}
-                  className="h-[220px] w-full rounded-t-lg object-cover"
+                  className="h-[220px] w-full rounded-t-lg object-contain bg-white"
                 />
                 <p className="p-5 text-primaryBlack">
                   {item.name} <br />

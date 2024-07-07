@@ -2,7 +2,7 @@ const productData = [
   {
     id: 1,
     name: "Анализатор мочи MIND UA-66",
-    img: `https://global-mt.ru/upload/iblock/207/hr2k4qvsduw97pc25maoxgijvdisav4v.jpg`,
+    img: `https://global-mt.ru/upload/iblock/fac/2z16po15mw0bukk89j839sr5ra7m6kgx.jpg`,
     category: "Новинки",
     price: 300000,
     seriesNumber: "12345",
@@ -25,7 +25,7 @@ const productData = [
   {
     id: 3,
     name: "Эндоскопия",
-    img: `https://global-mt.ru/upload/iblock/fe6/itjcpca4y9tp65rvv39762wocmb0x02e.jpg`,
+    img: `https://global-mt.ru/upload/iblock/54e/0ewuig86nbzzkpe5srk36avceish4cq5.jpg`,
     category: "Новинки",
     price: 392300,
     seriesNumber: "12347",

@@ -94,9 +94,9 @@ const Footer = () => {
             <div className="mb-10 md:mb-0">
               <p>Мы в соцсетях</p>
               <div className="mt-2 flex gap-3">
-                <FaWikipediaW className="rounded-sm bg-primaryWhite text-[20px] font-bold text-primaryGreen" />
-                <PiTelegramLogoLight className="rounded-sm bg-primaryWhite text-[20px] font-bold text-primaryGreen" />
-                <FaWhatsapp className="rounded-sm bg-primaryWhite text-[20px] font-bold text-primaryGreen" />
+                <FaWikipediaW className="rounded-sm p-1 bg-primaryWhite text-[25px] font-bold text-primaryGreen" />
+                <PiTelegramLogoLight className="rounded-sm p-1 bg-primaryWhite text-[25px] font-bold text-primaryGreen" />
+                <FaWhatsapp className="rounded-sm p-1 bg-primaryWhite text-[25px] font-bold text-primaryGreen" />
               </div>
             </div>
             <div className="flex flex-wrap gap-5 md:gap-20">

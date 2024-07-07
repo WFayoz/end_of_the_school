@@ -11,6 +11,7 @@ const Service = () => {
         <FactsInNums/>
         <Certificates/>
         <FormSection/>
+        <div className='mb-36'></div>
     </div>
   )
 }

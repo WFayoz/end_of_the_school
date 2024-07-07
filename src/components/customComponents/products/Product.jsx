@@ -8,7 +8,7 @@ const Product = ({ id, name, img, price, seriesNumber }) => {
 
   return (
     <div className="flex items-center justify-center">
-      <div className="flex h-[520px] w-[320px] flex-col items-center overflow-hidden rounded-lg border border-accent">
+      <div className="flex h-[520px] w-[320px] flex-col items-center overflow-hidden rounded-xl border border-accent">
         <Link to={`/review/${id}`} className="product-card">
           <img
             src={img}

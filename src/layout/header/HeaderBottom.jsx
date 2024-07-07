@@ -12,18 +12,19 @@ const HeaderBottom = () => {
           <img src={burger} alt="Burger" />
           Каталог
         </Link>
-        <Link to={"/cabinet"}>Производители</Link>
-        <li>Кабинеты под ключ</li>
+        <li to={"/cabinet"}>Производители</li>
+        <Link to={"/cabinet"}>Кабинеты под ключ</Link>
         <Link to={"/service"}>Услуги</Link>
         <li>Акции</li>
-        <li>Контакты</li>
+        <Link to={"/vacancy"}>Вакансии</Link>
+        <Link to={"/contacts"}>Контакты</Link>
       </div>
       <div className="flex gap-5 max-xl:hidden">
         <div className="flex cursor-pointer items-center text-primaryBlack">
           <p>Москва</p>
           <img src={location} alt="" />
         </div>
-        <button className="buttonW">+7(495)000-00-00</button>
+        <button className="buttonW">+7(495)000 -00-00</button>
         <button className="buttonG">Заказать звонок</button>
       </div>
       <div className="items-center justify-center rounded-full bg-primaryGreen p-2 xl:hidden">

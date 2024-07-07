@@ -13,6 +13,7 @@ import Varanty from "./pages/varanty/Varanty";
 import Vacancy from "./pages/vacancy/Vacancy";
 import Cabinet from "./pages/cabinet/Cabinet";
 import Service from "./pages/servicePage/Service";
+import Contacts from "./pages/contacts/Contacts";
 
 function App() {
   return (
@@ -32,7 +33,7 @@ function App() {
           <Route path="/vacancy" element={<Vacancy />} />
           <Route path="/cabinet" element={<Cabinet />} />
           <Route path="/service" element={<Service />} />
-          
+          <Route path="/contacts" element={<Contacts />} />
         </Routes>
         <Footer />
       </Router>

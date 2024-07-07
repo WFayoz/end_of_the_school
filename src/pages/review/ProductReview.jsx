@@ -1,14 +1,20 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import storeData from "../../services/data";
 import BasicRating from "../../components/RatingComp";
-import { addCart } from "../../redux/basketSlice";
+import {
+  addCart,
+  decreaseAmount,
+  increaseAmount,
+} from "../../redux/basketSlice";
 
 const ProductReview = () => {
   const { productId } = useParams();
   const product = storeData.find((item) => item.id === parseInt(productId));
   const dispatch = useDispatch();
+  const cart = useSelector((state) => state.basket.cart);
+  const cartItem = cart.find((item) => item.name === product.name);
 
   const handleAddToCart = () => {
     dispatch(
@@ -22,7 +28,7 @@ const ProductReview = () => {
         <img
           src={product.img}
           alt={product.name}
-          className="h-full w-full object-cover"
+          className="h-full w-full object-contain bg-primaryWhite"
         />
       </div>
       <div className="h-[509px] p-6">
@@ -37,6 +43,26 @@ const ProductReview = () => {
         </div>
         <p className="pt-4 text-[24px]">{product.price} руб.</p>
         <div className="mt-5 flex gap-3">
+          {cartItem ? (
+            <div className="flex flex-row items-center gap-4 rounded-xl border border-accent px-5 py-2 font-medium text-gray-600">
+              <button
+                onClick={() => {
+                  dispatch(decreaseAmount({ name: product.name }));
+                }}
+              >
+                -
+              </button>
+              <p>{cartItem ? cartItem.amount : 0}</p>
+              <button
+                onClick={() => {
+                  dispatch(increaseAmount({ name: product.name }));
+                }}
+              >
+                +
+              </button>
+            </div>
+          ) : null}
+
           <button className="buttonW">Задать вопрос</button>
           <button className="buttonG" onClick={handleAddToCart}>
             Добавить в корзину

@@ -11,7 +11,7 @@ const PaymentSection1 = () => {
           требующим обновления приборов в различных направлениях, от установок
           компьютерной томографии до ультразвуковых сканеров и ЛОР комбайнов.
         </p>
-        <div className="mt-10 grid grid-cols-3 gap-3">
+        <div className="mt-10 grid grid-cols-3 gap-3 max-md:grid-cols-2 max-sm:grid-cols-1">
           <div className="list-decimal rounded-lg border border-accent bg-primaryWhite p-7">
             <h2 className="text-[20px] font-semibold">Оплата наличными</h2>
             <li className="max-w-[342px] pt-2 text-secondaryGray">

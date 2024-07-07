@@ -12,7 +12,6 @@ const NextArrow = ({ onClick }) => (
     <GrLinkNext />
   </div>
 );
-
 const PrevArrow = ({ onClick }) => (
   <div
     className="custom-arrow prev-arrow border border-accent max-lg:hidden"
@@ -23,18 +22,16 @@ const PrevArrow = ({ onClick }) => (
 );
 
 const NewsCard = ({ imgSrc, date, title, description }) => (
-  <div className="flex items-center justify-center">
-    <div className="border-accent flex h-[465px] w-[320px] flex-col items-center overflow-hidden rounded-lg border max-lg:h-[400px]">
-      <img src={imgSrc} alt={title} className="h-[320px] w-[320px]" />
-      <div className="p-5">
-        <p className="text-[12px] text-secondaryGray max-lg:text-[10px]">
-          {date}
-        </p>
-        <p className="pb-3 pt-1 text-[18px] font-semibold text-black max-lg:text-[16px]">
-          {title}
-        </p>
-        <p className="text-secondaryGray max-lg:text-[12px]">{description}</p>
-      </div>
+  <div className="mx-2 overflow-hidden rounded-xl border border-accent">
+    <img src={imgSrc} alt={title} className="h-[320px] w-full object-fill" />
+    <div className="bg-primaryWhite p-5">
+      <p className="text-[12px] text-secondaryGray max-lg:text-[10px]">
+        {date}
+      </p>
+      <p className="pb-3 pt-1 text-[18px] font-semibold text-black max-lg:text-[16px]">
+        {title}
+      </p>
+      <p className="text-secondaryGray max-lg:text-[12px]">{description}</p>
     </div>
   </div>
 );
@@ -44,42 +41,23 @@ const NewsSection = () => {
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 4,
+    slidesToShow: 3,
     slidesToScroll: 1,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
+
     responsive: [
       {
         breakpoint: 1300,
-        settings: {
-          slidesToShow: 3.6,
-          slidesToScroll: 2,
-          initialSlide: 2,
-        },
+        settings: { slidesToShow: 3, slidesToScroll: 2, initialSlide: 2 },
       },
       {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 2,
-          initialSlide: 1,
-        },
+        breakpoint: 980,
+        settings: { slidesToShow: 2, slidesToScroll: 2, initialSlide: 2 },
       },
       {
-        breakpoint: 900,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 1,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          initialSlide: 1,
-        },
+        breakpoint: 660,
+        settings: { slidesToShow: 1, slidesToScroll: 1, initialSlide: 2 },
       },
     ],
   };
@@ -137,15 +115,15 @@ const NewsSection = () => {
   ];
 
   return (
-    <div className="relative mx-auto mt-32 flex max-w-[1350px] gap-[135px] overflow-hidden  pl-5 max-md:flex-col max-md:px-5">
+    <div className="relative mx-auto my-36 w-full max-w-[1350px] px-5">
       <div className="flex w-full items-center justify-between">
-        <p className="text-[32px] text-primaryBlack">
-          Новости <br /> компании
+        <p className="text-[32px] text-primaryBlack max-sm:text-[20px]">
+          Новости компании
         </p>
         <button className="buttonG md:hidden">Все новости</button>
       </div>
-      <div className="mb-32 flex w-full flex-col items-center justify-center">
-        <Slider {...settings} className="w-full">
+      <div className="mt-10">
+        <Slider {...settings}>
           {newsData.map((news, index) => (
             <NewsCard
               key={index}
@@ -156,9 +134,9 @@ const NewsSection = () => {
             />
           ))}
         </Slider>
-        <button className="buttonG -mt-8 ml-[500px] max-xl:ml-[300px] max-lg:ml-[40px] max-lg:mt-5 max-md:hidden">
-          Все новости
-        </button>
+        <div className="absolute bottom-0 right-5 flex items-center gap-5 max-lg:-bottom-16 max-md:hidden">
+          <button className="buttonG">Все новости</button>
+        </div>
       </div>
     </div>
   );

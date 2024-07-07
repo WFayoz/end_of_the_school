@@ -9,7 +9,6 @@ const Varanty = () => {
     <div>
       <VarantyHero />
       <VarantyOffers/>
-
       <VarantyAttention />
       <FormSection />
       <div className="mb-36"></div>
