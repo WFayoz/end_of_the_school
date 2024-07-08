@@ -9,10 +9,10 @@ const ServiceCards = () => {
         {servicesData.map((item) => (
           <div key={item.id} className="flex bg-primaryWhite rounded-xl justify-between overflow-hidden max-lg:flex-col-reverse ">
             <div className="max-w-[350px] w-full p-5">
-            <h2 className="text-[18px] font-semibold h-[40px]">{item.name}</h2>
+            <h2 className="text-[18px] font-semibold h-[20px]">{item.name}</h2>
             <p className="text-secondaryGray text-[12px] pt-9">Описание услуги</p>
             <p className="text-secondaryGray  w-full ">{item.description}</p>
-            <button className="buttonW mt-20">Заказать</button>
+            <button className="buttonW mt-10">Заказать</button>
             </div>
             <img src={item.img} alt={item.name} className="w-[265px] object-cover bg-transparent max-lg:w-full"/>
           </div>

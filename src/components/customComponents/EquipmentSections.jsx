@@ -60,7 +60,7 @@ const EquipmentSections = () => (
                 alt=""
                 className="w-full"
               />
-              <p className="bg-primaryWhite p-5">Экспресс лаборатория</p>
+              <p className="bg-primaryCream p-5">Экспресс лаборатория</p>
             </div>
           </div>
         ))}

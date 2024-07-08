@@ -24,7 +24,7 @@ const PrevArrow = ({ onClick }) => (
 const NewsCard = ({ imgSrc, date, title, description }) => (
   <div className="mx-2 overflow-hidden rounded-xl border border-accent">
     <img src={imgSrc} alt={title} className="h-[320px] w-full object-fill" />
-    <div className="bg-primaryWhite p-5">
+    <div className="bg-transparent p-5">
       <p className="text-[12px] text-secondaryGray max-lg:text-[10px]">
         {date}
       </p>

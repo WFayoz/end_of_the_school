@@ -14,6 +14,9 @@ import Vacancy from "./pages/vacancy/Vacancy";
 import Cabinet from "./pages/cabinet/Cabinet";
 import Service from "./pages/servicePage/Service";
 import Contacts from "./pages/contacts/Contacts";
+import Faq from "./pages/FAQ/Faq";
+import Manafactures from "./pages/manafactures/Manafactures";
+import Discount from "./pages/discount/Discount";
 
 function App() {
   return (
@@ -34,6 +37,9 @@ function App() {
           <Route path="/cabinet" element={<Cabinet />} />
           <Route path="/service" element={<Service />} />
           <Route path="/contacts" element={<Contacts />} />
+          <Route path="/faq" element={<Faq />} />
+          <Route path="/manafactures" element={<Manafactures />} />
+          <Route path="/discount" element={<Discount />} />
         </Routes>
         <Footer />
       </Router>

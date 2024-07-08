@@ -4,7 +4,7 @@ import VacancyAccordion2 from "./VacancyAccardion2";
 
 const VacancyHero = () => {
   return (
-    <div className="mx-auto flex w-full max-w-[1350px] justify-between px-5">
+    <div className="mx-auto flex w-full max-w-[1350px] justify-between px-5 mt-10">
       <div>
         <h1 className="text-[30px] text-primaryBlack">Вакансии</h1>
         <p className="max-w-[540px] pt-6">

@@ -3,9 +3,18 @@ import React from "react";
 
 const Pagination = ({ currentPage, totalPages, onPageChange }) => {
   const pages = [];
-  for (let i = 1; i <= totalPages; i++) {
-    pages.push(i);
-  }
+  const range = 2;
+
+  const generatePages = () => {
+    let start = Math.max(1, currentPage - range);
+    let end = Math.min(totalPages, currentPage + range);
+
+    for (let i = start; i <= end; i++) {
+      pages.push(i);
+    }
+  };
+
+  generatePages();
 
   return (
     <div className="mt-4 flex items-center justify-center space-x-1">

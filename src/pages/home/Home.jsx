@@ -2,10 +2,7 @@ import React, { useEffect } from "react";
 import CatagorySection from "./CatagorySection";
 import PreviousNextMethods from "./Banner";
 import CustomComponents from "../../components/customComponents/CustomComponents";
-
-import PaginationView from "../delivery/PaginationView";
-import FaqAccardion from "../FAQ/FaqAccardion";
-import FaqWrapper from "../FAQ/FaqWrapper";
+import Discount from "../discount/Discount";
 
 const Home = () => {
   useEffect(() => {
@@ -16,11 +13,7 @@ const Home = () => {
       <PreviousNextMethods />
       <CatagorySection />
       <CustomComponents />
-      <PaginationView />
-      <div className="my-96">
-      <FaqWrapper/>
-
-      </div>
+      <Discount/>
     </div>
   );
 };

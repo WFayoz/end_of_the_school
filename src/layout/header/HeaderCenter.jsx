@@ -74,7 +74,7 @@ const HeaderCenter = () => {
             className="relative flex cursor-pointer flex-col items-center font-normal text-secondaryGray hover:text-[black]"
           >
             <img src={basket} alt="" />
-            <div className="absolute -right-1 -top-2 rounded-full bg-primaryGreen px-2 py-[0.1px] text-white">
+            <div className="absolute right-2 -top-2 rounded-full bg-primaryGreen text-[10px] w-5 flex items-center justify-center h-5 text-white max-xl:w-4 max-xl:h-4 max-xl:-right-2 ">
               {cart.length}
             </div>
             <p className="max-xl:hidden">Корзина</p>

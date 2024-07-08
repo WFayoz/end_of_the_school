@@ -2,14 +2,13 @@ import React from "react";
 
 const HeroAbout = () => {
   return (
-    <div className="mx-auto w-full max-w-[1350px] items-center justify-center px-5 mt-10">
+    <div className="mx-auto mt-10 w-full max-w-[1350px] items-center justify-center px-5">
       <div className="w-full">
         <img
           src="https://global-mt.ru/local/templates/gmt/img/companyMedical.png"
-          alt=""
         />
       </div>
-      <div className="flex flex-wrap justify-between mt-10">
+      <div className="mt-10 flex flex-wrap justify-between">
         <div className="w-[48%] items-center justify-start">
           <h1 className="text-[48px] text-primaryBlack">
             Глобал медикал трейд

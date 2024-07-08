@@ -12,10 +12,10 @@ const HeaderBottom = () => {
           <img src={burger} alt="Burger" />
           Каталог
         </Link>
-        <li to={"/cabinet"}>Производители</li>
+        <Link to={"/manafactures"}>Производители</Link>
         <Link to={"/cabinet"}>Кабинеты под ключ</Link>
         <Link to={"/service"}>Услуги</Link>
-        <li>Акции</li>
+        <Link to={"/discount"}>Акции</Link>
         <Link to={"/vacancy"}>Вакансии</Link>
         <Link to={"/contacts"}>Контакты</Link>
       </div>

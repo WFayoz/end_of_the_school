@@ -100,10 +100,11 @@ const Shop = () => {
       <div className="mb-32 flex w-full flex-col items-center justify-center">
         <Slider
           {...settings}
-          className="w-full mx-3 max-md:flex max-md:items-center max-md:justify-center"
+          className="mx-3 w-full max-md:flex max-md:items-center max-md:justify-center"
         >
           {products.map((item) => (
             <Product
+            category={item.category}
               key={item.id}
               id={item.id}
               name={item.name}

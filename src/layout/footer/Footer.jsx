@@ -19,15 +19,15 @@ const Footer = () => {
                 <li>О компании</li>
                 <li>Сертификаты</li>
                 <Link to={"/vacancy"}>Вакансии</Link>
-                <li>Гарантии</li>
-                <li>Услуги</li>
+                <Link to='/varanty'>Гарантии</Link>
+                <Link to="/service">Услуги</Link>
                 <li>Акции</li>
-                <li>Доставка</li>
+                <Link to="/delivery">Доставка</Link>
               </ul>
               <ul className="flex flex-col gap-2">
-                <li>Оплата</li>
+                <Link to="/payment">Оплата</Link>
                 <li>Возврат</li>
-                <li>FAQ</li>
+                <Link to="/faq">FAQ</Link>
                 <li>Лизинг</li>
                 <li>Отзывы</li>
                 <li>Блог</li>

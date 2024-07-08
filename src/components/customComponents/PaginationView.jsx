@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Pagination from "../../components/customComponents/Pagination";
+import Pagination from "../../components/customComponents/Pagination"; // Make sure this component exists
 import data from "../../services/FaqData";
 import { Accordion as MuiAccordion } from "@mui/material";
 import { styled } from "@mui/material/styles";
@@ -8,6 +8,7 @@ import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import { GoPlusCircle } from "react-icons/go";
 
+// Styled Components
 const Accordion = styled((props) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
 ))(({ theme }) => ({
@@ -50,7 +51,7 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
   borderTop: "1px solid white",
 }));
 
-const FaqAccardion = () => {
+const PaginationView = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 10;
   const totalPages = Math.ceil(data.length / itemsPerPage);
@@ -69,8 +70,11 @@ const FaqAccardion = () => {
   const paginatedData = data.slice(startIndex, startIndex + itemsPerPage);
 
   return (
-    <>
-      <ul className="mx-auto list-inside list-disc">
+    <div className="App">
+      <h1 className="my-4 text-center text-2xl font-bold">
+        Pagination Example
+      </h1>
+      <ul className="mx-auto max-w-md list-inside list-disc">
         {paginatedData.map((item) => (
           <Accordion
             key={item.id}
@@ -99,8 +103,8 @@ const FaqAccardion = () => {
         totalPages={totalPages}
         onPageChange={handlePageChange}
       />
-    </>
+    </div>
   );
 };
 
-export default FaqAccardion;
+export default PaginationView;
