@@ -17,7 +17,9 @@ const HeaderTop = () => {
         <Link to="/varanty" className="text-secondaryGray">
           Гарантии
         </Link>
-        <li className="text-secondaryGray">Блог</li>
+        <Link to={"/blog"} className="text-secondaryGray">
+          Блог
+        </Link>
       </ul>
       <ul className="flex items-center justify-center gap-11">
         <a href="https://news.mail.ru/" className="text-secondaryGray">

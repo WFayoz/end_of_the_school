@@ -2,14 +2,14 @@ import React, { useState } from "react";
 import { FaAngleRight, FaAngleDown } from "react-icons/fa";
 import catalogTypes from "../../services/catalogTypes";
 
-const DiscountDropdown = () => {
+const BlogDropdown = () => {
   const [isOpen, setIsOpen] = useState(true);
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
   };
   return (
-    <div className="w-[320px] h-min rounded-xl border border-accent p-4 max-md:hidden">
+    <div className="h-min w-[320px] rounded-xl border border-accent p-4 max-xl:hidden">
       <p
         onClick={toggleDropdown}
         className="flex cursor-pointer items-center justify-between"
@@ -41,4 +41,4 @@ const DiscountDropdown = () => {
   );
 };
 
-export default DiscountDropdown;
+export default BlogDropdown;

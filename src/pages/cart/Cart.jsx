@@ -29,7 +29,7 @@ const Cart = () => {
         <div className="my-28 flex w-full items-start justify-between">
           <h1 className="text-[48px] text-primaryBlack">Корзина</h1>
           <div>
-            <h2 className="text-[30px]">“Не добавлено товаров к Корзине”</h2>
+            <h2 className="text-[30px]">“Не добавлено товаров в Корзину”</h2>
             <p className="max-w-[384px] py-6 text-secondaryGray">
               Вы можете перейти на главную страницу или воспользоваться
               каталогом товаров

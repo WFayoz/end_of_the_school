@@ -17,6 +17,7 @@ import Contacts from "./pages/contacts/Contacts";
 import Faq from "./pages/FAQ/Faq";
 import Manafactures from "./pages/manafactures/Manafactures";
 import Discount from "./pages/discount/Discount";
+import Blog from "./pages/blog/Blog";
 
 function App() {
   return (
@@ -40,6 +41,7 @@ function App() {
           <Route path="/faq" element={<Faq />} />
           <Route path="/manafactures" element={<Manafactures />} />
           <Route path="/discount" element={<Discount />} />
+          <Route path="/blog" element={<Blog />} />
         </Routes>
         <Footer />
       </Router>
