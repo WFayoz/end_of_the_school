@@ -3,37 +3,42 @@ import storeData from "../services/data";
 
 const initialState = {
   products: storeData,
-  amount: 0,
-  total: 0,
-  cart: JSON.parse(localStorage.getItem("wishlist")) || [],
+  wishlist: JSON.parse(localStorage.getItem("wishlist")) || [],
 };
 
-const basketSlice = createSlice({
-  name: "wishlasket",
+const wishlistSlice = createSlice({
+  name: "wishlist",
   initialState,
   reducers: {
-    removeItem: (state, { payload }) => {
-      state.cart = state.cart.filter((item) => item.name !== payload.name);
-      localStorage.setItem("cart", JSON.stringify(state.cart));
-    },
-    addwishlist: (state, { payload }) => {
-      const itemInCart = state.cart.find((item) => item.name === payload.name);
-      if (!itemInCart) {
+    toggleWishlist: (state, { payload }) => {
+      const itemIndex = state.wishlist.findIndex(
+        (item) => item.name === payload.name,
+      );
+      if (itemIndex !== -1) {
+        state.wishlist.splice(itemIndex, 1);
+      } else {
         const item = state.products.find((item) => item.name === payload.name);
         if (item) {
-          state.cart.push({ ...item, amount: 1 });
+          state.wishlist.push({ ...item, amount: 1 });
         }
       }
-      localStorage.setItem("cart", JSON.stringify(state.cart));
+
+      localStorage.setItem("wishlist", JSON.stringify(state.wishlist));
     },
-    
+    updateTotal: (state) => {
+      let amount = 0;
+      let total = 0;
+      state.wishlist.forEach((item) => {
+        amount += item.amount;
+        total += item.amount * item.price;
+      });
+      state.amount = amount;
+      state.total = total;
+      localStorage.setItem("wishlist", JSON.stringify(state.wishlist));
+    },
   },
-  
 });
 
-export const { removeItem, addwishlist } = basketSlice.actions;
+export const { toggleWishlist } = wishlistSlice.actions; // Updated export
 
-export default basketSlice.reducer;
-
-
-
+export default wishlistSlice.reducer;

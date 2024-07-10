@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FaAngleRight, FaAngleDown } from "react-icons/fa";
-import catalogTypes from "../../services/catalogTypes";
+import catalogTypes from "../../services/discountTypes";
 
 const DiscountDropdown = () => {
   const [isOpen, setIsOpen] = useState(true);
@@ -9,12 +9,12 @@ const DiscountDropdown = () => {
     setIsOpen(!isOpen);
   };
   return (
-    <div className="w-[320px] h-min rounded-xl border border-accent p-4 max-md:hidden">
+    <div className="h-min w-[320px] rounded-xl border border-accent p-4 max-md:hidden">
       <p
         onClick={toggleDropdown}
         className="flex cursor-pointer items-center justify-between"
       >
-        Направления
+        Категории
         {isOpen ? (
           <FaAngleDown className="text-[14px] text-secondaryGray" />
         ) : (

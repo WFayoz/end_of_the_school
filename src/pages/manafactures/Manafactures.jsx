@@ -1,12 +1,14 @@
-import React from 'react'
-import ManafacturesHero from './ManafacturesHero'
+import React from "react";
+import ManafacturesHero from "./ManafacturesHero";
+import CustomComponents from "../../components/customComponents/CustomComponents";
 
 const Manafactures = () => {
   return (
     <>
-    <ManafacturesHero/>
+      <ManafacturesHero />
+      <CustomComponents/>
     </>
-  )
-}
+  );
+};
 
-export default Manafactures
+export default Manafactures;

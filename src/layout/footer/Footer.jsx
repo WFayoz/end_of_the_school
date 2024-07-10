@@ -16,12 +16,12 @@ const Footer = () => {
             <div className="w-[210px] border border-white"></div>
             <div className="mt-5 flex flex-wrap gap-5 md:gap-14">
               <ul className="flex flex-col gap-2">
-                <li>О компании</li>
+                <Link to={"/about"}>О компании</Link>
                 <li>Сертификаты</li>
                 <Link to={"/vacancy"}>Вакансии</Link>
-                <Link to='/varanty'>Гарантии</Link>
+                <Link to="/varanty">Гарантии</Link>
                 <Link to="/service">Услуги</Link>
-                <li>Акции</li>
+                <Link to={"/discount"}>Акции</Link>
                 <Link to="/delivery">Доставка</Link>
               </ul>
               <ul className="flex flex-col gap-2">
@@ -29,8 +29,8 @@ const Footer = () => {
                 <li>Возврат</li>
                 <Link to="/faq">FAQ</Link>
                 <li>Лизинг</li>
-                <li>Отзывы</li>
-                <li>Блог</li>
+                <Link to={"/comments"}>Отзывы</Link>
+                <Link to={"/blog"}>Блог</Link>
               </ul>
             </div>
           </div>
@@ -94,9 +94,9 @@ const Footer = () => {
             <div className="mb-10 md:mb-0">
               <p>Мы в соцсетях</p>
               <div className="mt-2 flex gap-3">
-                <FaWikipediaW className="rounded-sm p-1 bg-primaryWhite text-[25px] font-bold text-primaryGreen" />
-                <PiTelegramLogoLight className="rounded-sm p-1 bg-primaryWhite text-[25px] font-bold text-primaryGreen" />
-                <FaWhatsapp className="rounded-sm p-1 bg-primaryWhite text-[25px] font-bold text-primaryGreen" />
+                <FaWikipediaW className="rounded-sm bg-primaryWhite p-1 text-[25px] font-bold text-primaryGreen" />
+                <PiTelegramLogoLight className="rounded-sm bg-primaryWhite p-1 text-[25px] font-bold text-primaryGreen" />
+                <FaWhatsapp className="rounded-sm bg-primaryWhite p-1 text-[25px] font-bold text-primaryGreen" />
               </div>
             </div>
             <div className="flex flex-wrap gap-5 md:gap-20">

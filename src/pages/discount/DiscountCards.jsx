@@ -17,7 +17,7 @@ const DiscountCards = () => {
     setIsOpen(!isOpen);
   };
   return (
-    <div className="flex flex-col gap-[30px] items-center justify-center">
+    <div className="flex flex-col items-center justify-center gap-[30px]">
       <div className="h-min w-full rounded-xl border border-accent p-4 md:hidden">
         <p
           onClick={toggleDropdown}
@@ -47,7 +47,7 @@ const DiscountCards = () => {
           </>
         )}
       </div>
-      <div className="grid w-full grid-cols-3  items-center justify-center gap-3 max-lg:grid-cols-2 max-sm:grid-cols-1">
+      <div className="grid w-full grid-cols-3 gap-3 max-lg:grid-cols-2 max-md:gap-6 max-sm:grid-cols-1">
         {filteredData.map((item) => (
           <div
             key={item.id}

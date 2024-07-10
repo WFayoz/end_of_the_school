@@ -1,12 +1,18 @@
 import React from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { addCart } from "../../../redux/basketSlice";
 import { Link } from "react-router-dom";
 import favourite from "../../../../public/icons/favourite.svg";
+import likedGreen from "../../../../public/icons/likedGreen.svg";
 import comparison from "../../../../public/icons/comparison.svg";
+import { toggleCompare } from "../../../redux/compareSlice";
+import { toggleWishlist } from "../../../redux/wishlistSlice";
 
 const Product = ({ id, name, img, price, seriesNumber, category }) => {
+  const { wishlist } = useSelector((state) => state.wishlist);
+
   const dispatch = useDispatch();
+  const isLiked = wishlist.some((item) => item.name === name);
 
   return (
     <div className="flex items-center justify-center">
@@ -18,10 +24,14 @@ const Product = ({ id, name, img, price, seriesNumber, category }) => {
             </div>
             <div className="flex gap-2">
               <button>
-                <img src={comparison} alt="" />
+                <img
+                  src={comparison}
+                  alt=""
+                  onClick={() => dispatch(toggleCompare({ name }))}
+                />
               </button>
-              <button>
-                <img src={favourite} alt="" />
+              <button onClick={() => dispatch(toggleWishlist({ name }))}>
+                <img src={isLiked ? likedGreen : favourite} alt="" />
               </button>
             </div>
           </div>

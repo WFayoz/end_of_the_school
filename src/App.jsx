@@ -18,6 +18,9 @@ import Faq from "./pages/FAQ/Faq";
 import Manafactures from "./pages/manafactures/Manafactures";
 import Discount from "./pages/discount/Discount";
 import Blog from "./pages/blog/Blog";
+import Wishlist from "./pages/wishlist/Wishlist";
+import Compare from "./pages/compare/Compare";
+import Comments from "./pages/comments/Comments";
 
 function App() {
   return (
@@ -42,6 +45,10 @@ function App() {
           <Route path="/manafactures" element={<Manafactures />} />
           <Route path="/discount" element={<Discount />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/wishlist" element={<Wishlist />} />
+          <Route path="/compare" element={<Compare />} />
+          <Route path="/comments" element={<Comments />} />
+          
         </Routes>
         <Footer />
       </Router>

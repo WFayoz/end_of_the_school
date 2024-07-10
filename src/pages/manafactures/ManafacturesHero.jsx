@@ -35,7 +35,7 @@ const PaginationView = () => {
   return (
     <div className="mx-auto mt-16 flex w-full max-w-[1350px] gap-3 px-5">
       <div>
-        <div className="h-min w-[320px] rounded-xl border border-accent p-4 max-xl:hidden">
+        <div className="h-min w-[320px] rounded-xl border border-accent p-4 max-md:hidden">
           <p
             onClick={toggleDropdown}
             className="flex cursor-pointer items-center justify-between"
@@ -64,7 +64,7 @@ const PaginationView = () => {
             </>
           )}
         </div>
-        <div className="mt-3 h-min w-[320px] rounded-xl border border-accent p-4 max-xl:hidden">
+        <div className="mt-3 h-min w-[320px] rounded-xl border border-accent p-4 max-md:hidden">
           <p
             onClick={() => setDropdownOpen(!dropdownOpen)}
             className="flex cursor-pointer items-center justify-between"
@@ -103,7 +103,71 @@ const PaginationView = () => {
         </div>
       </div>
       <div className="mx-auto w-full">
-        <div className="mb-10 grid grid-cols-3 gap-3 max-md:gap-6 max-sm:grid-cols-1 max-md:grid-cols-2 max-lg:grid-cols-3">
+        <div>
+          <div className="h-min w-full rounded-xl border border-accent p-4 md:hidden">
+            <p
+              onClick={toggleDropdown}
+              className="flex cursor-pointer items-center justify-between"
+            >
+              Направления
+              {isOpen ? (
+                <FaAngleDown className="text-[14px] text-secondaryGray" />
+              ) : (
+                <FaAngleRight className="text-[14px] text-secondaryGray" />
+              )}
+            </p>
+            {isOpen && (
+              <>
+                <div className="my-5 w-full border border-secondaryGray"></div>
+                <ul className="flex w-full flex-col gap-2">
+                  {catalogTypes.map((item, index) => (
+                    <li
+                      key={index}
+                      className="flex w-full items-center justify-between text-[14px] text-primaryBlack"
+                    >
+                      <p>{item}</p>
+                      <FaAngleRight className="text-[14px] text-secondaryGray" />
+                    </li>
+                  ))}
+                </ul>
+              </>
+            )}
+          </div>
+          <div className="mb-5 mt-3 h-min w-full rounded-xl border border-accent p-4 md:hidden">
+            <p
+              onClick={() => setDropdownOpen(!dropdownOpen)}
+              className="flex cursor-pointer items-center justify-between"
+            >
+              Страны
+              {dropdownOpen ? (
+                <FaAngleDown className="text-[14px] text-secondaryGray" />
+              ) : (
+                <FaAngleRight className="text-[14px] text-secondaryGray" />
+              )}
+            </p>
+            {dropdownOpen && (
+              <div className="mt-2 max-h-64 overflow-y-auto rounded">
+                <input
+                  type="text"
+                  placeholder="Поиск по стране"
+                  className="mb-4 w-full rounded-[50px] border p-2 outline-none"
+                />
+                {countries.map((country, index) => (
+                  <div key={index} className="mb-2 flex items-center">
+                    <input
+                      type="checkbox"
+                      checked={selectedCountries[index]}
+                      onChange={() => toggleCountry(index)}
+                      className="mr-2 accent-primaryGreen"
+                    />
+                    <label>{country.name}</label>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        </div>
+        <div className="mb-10 grid grid-cols-3 gap-3 max-md:gap-6 max-lg:grid-cols-2 max-sm:grid-cols-1">
           {paginatedData.map((item) => (
             <li key={item.id} className="flex flex-col gap-3">
               <div className="w-full flex-1 rounded-lg border border-accent bg-primaryCream object-cover">

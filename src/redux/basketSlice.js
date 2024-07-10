@@ -44,7 +44,7 @@ const basketSlice = createSlice({
       }
       localStorage.setItem("cart", JSON.stringify(state.cart));
     },
-    
+
     updateTotal: (state) => {
       let amount = 0;
       let total = 0;
