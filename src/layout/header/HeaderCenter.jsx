@@ -74,18 +74,17 @@ const HeaderCenter = () => {
           </p>
         </div>
         <div className="flex items-center gap-5 max-xl:gap-3 max-md:hidden">
-        <SignedOut>
+          <SignedOut>
             <SignInButton>
-            <div className="flex cursor-pointer flex-col items-center font-normal text-secondaryGray hover:text-[black]">
-            <img src={login} alt="" />
-            <p className="max-xl:hidden">Войти</p>
-
-          </div>
+              <div className="flex cursor-pointer flex-col items-center font-normal text-secondaryGray hover:text-[black]">
+                <img src={login} alt="" />
+                <p className="max-xl:hidden">Войти</p>
+              </div>
             </SignInButton>
           </SignedOut>
           <SignedIn>
-              <UserButton />
-            </SignedIn>
+            <UserButton />
+          </SignedIn>
           <Link
             to={"/wishlist"}
             className="relative flex cursor-pointer flex-col items-center font-normal text-secondaryGray hover:text-[black]"
@@ -180,13 +179,17 @@ const HeaderCenter = () => {
           )}
           <p className="text-[12px] text-secondaryGray">Избранное</p>
         </Link>
-        <Link
-          to={"/login"}
-          className="flex flex-col items-center justify-center gap-1"
-        >
-          <img src={login} alt="" />
-          <p className="text-[12px] text-secondaryGray">Войти</p>
-        </Link>
+        <SignedOut>
+          <SignInButton>
+            <div className="flex cursor-pointer flex-col items-center font-normal text-secondaryGray hover:text-[black]">
+              <img src={login} alt="" />
+              <p className="max-xl:hidden">Войти</p>
+            </div>
+          </SignInButton>
+        </SignedOut>
+        <SignedIn>
+          <UserButton />
+        </SignedIn>
       </div>
     </div>
   );
