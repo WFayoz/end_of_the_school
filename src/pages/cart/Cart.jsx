@@ -40,8 +40,8 @@ const Cart = () => {
               каталогом товаров
             </p>
             <div className="flex gap-3">
-              <button className="buttonW">На главную</button>
-              <button className="buttonG">В каталог</button>
+              <button className="buttonW" to={"/"}>На главную</button>
+              <button className="buttonG" to={"/catalog"}>В каталог</button>
             </div>
           </div>
         </div>
